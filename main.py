@@ -3,6 +3,7 @@ import smtplib
 import ssl
 
 from datetime import datetime, timedelta
+from secrets import smtp_server, port, sender_email, receiver_email, password
 from typing import Tuple
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -10,10 +11,11 @@ from selenium.webdriver.support.ui import Select
 
 
 # TODO: alles in mehrere Funktionen zerlegen
-# TODO: mehrere Module?
 # TODO: docstrings bei Funktionen
-# TODO: Typisierung bei Parametern
 # TODO: secrets_file with password
+# TODO: poetry
+# TODO: deploy to GitHub Actions / cronjob
+# TODO: Change days to -1 in function get_recent_dates()?
 
 
 def german_to_english(date: str) -> str:
@@ -99,7 +101,7 @@ def get_recent_dates(links: list) -> list:
             date_list.append((date_obj, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-2)  # TODO: Change days to -1 ?
+    date_some_days_ago = datetime.now() + timedelta(days=-2)
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
@@ -142,11 +144,9 @@ def get_wg_info(recent_entries_link_list: list) -> Tuple[str, str, str, str, str
         address_string_2 = address_pattern_2.search(temp_address)
         address = address_string_2.group(2)
 
-        temp_geschoss = adress_string.group(6)  # e.g. "2.OG, "
-        geschoss_pattern_2 = re.compile(r'(.*),?\s?$')  # pattern looks for comma and whitespace at the end
-        geschoss_string_2 = geschoss_pattern_2.search(temp_geschoss)
-        geschoss = geschoss_string_2.group(1)
-        print(geschoss)
+        geschoss = adress_string.group(6)  # e.g. "DG, "
+        if geschoss.endswith(', '):
+            geschoss = geschoss.replace(', ', '')  # e.g. "DG"
 
         available_from = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]/b[5]').text
 
@@ -251,12 +251,6 @@ def send_mail(date: str, room: str, square_meters: str, size_of_wg: str, distric
               smoking_applicant: str, mitwohni: str, link: str):
     # send email
 
-    port = 465  # for ssl
-    smtp_server = "mail.gandi.net"
-    sender_email = "info@andreashechler.com"
-    receiver_email = "info@andreashechler.com"
-    password = input("Type your password and press enter: ")
-
     message = f"""Subject: WG-Company: neue WG in {district}
 WG-ÜBERBLICK
 
@@ -318,9 +312,6 @@ Einstelldatum:  {date}
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
-
-
-# deploy to GitHub Actions / cronjob
 
 
 def main():
