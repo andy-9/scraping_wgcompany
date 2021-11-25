@@ -3,6 +3,7 @@ import smtplib
 import ssl
 
 from datetime import datetime, timedelta
+from typing import Tuple
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -36,7 +37,7 @@ def german_to_english(date: str) -> str:
     return date
 
 
-def get_links_wg_offers():
+def get_links_wg_offers() -> list:
     driver = webdriver.Firefox()
     driver.get('http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100')
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
@@ -109,7 +110,10 @@ def get_recent_dates(links: list) -> list:
     return recent_entries_link_list
 
 
-def get_wg_info(recent_entries_link_list: list):
+def get_wg_info(recent_entries_link_list: list) -> Tuple[str, str, str, str, str, str, str, str, str, str, str, str,
+                                                         str, str, str, str, str, str, str, str, str, str, str, str,
+                                                         str, str, str, str, str, str, str, str, str, str, str, str,
+                                                         str, str]:
     driver = webdriver.Firefox()
 
     # loop through list to get the data I want
@@ -139,7 +143,7 @@ def get_wg_info(recent_entries_link_list: list):
         address = address_string_2.group(2)
 
         temp_geschoss = adress_string.group(6)  # e.g. "2.OG, "
-        geschoss_pattern_2 = re.compile(r'(.*)\,?\s?$')  # pattern looks for comma and whitespace at the end
+        geschoss_pattern_2 = re.compile(r'(.*),?\s?$')  # pattern looks for comma and whitespace at the end
         geschoss_string_2 = geschoss_pattern_2.search(temp_geschoss)
         geschoss = geschoss_string_2.group(1)
         print(geschoss)
@@ -322,9 +326,9 @@ Einstelldatum:  {date}
 def main():
     links = get_links_wg_offers()
 
-    recent_entries_link_list = get_recent_dates(links)
+    recent_entries_link_list = get_recent_dates(links=links)
 
-    wg_info = get_wg_info(recent_entries_link_list)  # wg_info is tuple with 37 string-values
+    wg_info = get_wg_info(recent_entries_link_list=recent_entries_link_list)  # wg_info is tuple with 37 string-values
 
     send_mail(date=wg_info[0], room=wg_info[1], square_meters=wg_info[2], size_of_wg=wg_info[3], district=wg_info[4],
               address=wg_info[5], geschoss=wg_info[6], available_from=wg_info[7], price=wg_info[8],
