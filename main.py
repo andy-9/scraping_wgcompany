@@ -197,40 +197,75 @@ def scrape_site():
         mitwohni = driver.find_element(By.XPATH, '/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td['
                                                  '4]/b').text.strip()
 
-        print(f'DIE ANZEIGE:\nDatum: {date}\nZimmeranzahl: {room}\nQuadratmeter: {square_meters}\nWG-Größe: '
-              f'{size_of_wg}\nBezirk: {district}\nAdresse: {address}\nGeschoss: {geschoss}\nFrei ab: '
-              f'{available_from}\nMiete: {price} {nebenkosten}\nE-Mail: {email}\nTelefon: {telephone}\nAnzeigentext:'
-              f' {ad_text}\nWie lange: {how_long}\nMöbliert: {furnished}\nBalkon: {balcony}\nBoden: {floor}\nHeizung:'
-              f'{heating}\nAbstand: {abstand}\nHaustyp: {house_type}\nWG-Größe: {wg_size}\nZimmeranzahl:'
-              f' {amount_of_rooms}\nHaustiere erlaubt: {animals_allowed}\nTV: {tv}\nRauchen: '
-              f'{smoking_wg}\nGeschlecht: {gender_wg}\nKinder: {children_wg}\nAlter: {age_wg}\nSex. Orientierung:'
-              f' {sexual_orientation_wg}\nErnährung: {nutrition_wg}\nWG-Art: {art_wg}\nGeschlecht: '
-              f'{gender_applicant}\nKinder: {children_applicant}\nAlter: {age_applicant}\nSex. Orientierung:'
-              f' {sexual_orientation_applicant}\nRaucher*in: {smoking_applicant}\nAnzahl Mitbewohner*in gesucht:'
-              f' {mitwohni}\n\n\n')
+        # send email
+        port = 465  # for ssl
+        smtp_server = "mail.gandi.net"
+        sender_email = "info@andreashechler.com"
+        receiver_email = "info@andreashechler.com"
+        password = input("Type your password and press enter: ")
+
+        message = f"""Subject: WG-Company: neue WG
+WG-ÜBERBLICK
+Datum:          {date}
+Zimmeranzahl:   {room}
+Quadratmeter:   {square_meters}
+WG-Größe:       {size_of_wg}
+Bezirk:         {district}
+Adresse:        {address}
+Geschoss:       {geschoss}
+Frei ab:        {available_from}
+Miete:          {price} {nebenkosten}
+
+Anzeigentext:   {ad_text}
+
+DAS ZIMMER
+Wie lange:      {how_long}
+Möbliert:       {furnished}
+Balkon:         {balcony}
+Boden:          {floor}
+Heizung:        {heating}
+Abstand:        {abstand}
+
+DIE WOHNUNG
+Haustyp:        {house_type}
+WG-Größe:       {wg_size}
+Zimmeranzahl:   {amount_of_rooms}
+Haustiere erl.: {animals_allowed}
+TV:             {tv}
+Rauchen:        {smoking_wg}
+
+WIR SIND
+Geschlecht:     {gender_wg}
+Kinder:         {children_wg}
+Alter:          {age_wg}
+Sex. Orient.:   {sexual_orientation_wg}
+Ernährung:      {nutrition_wg}
+WG-Art:         {art_wg}
+
+WIR SUCHEN
+Geschlecht:     {gender_applicant}
+Kinder:         {children_applicant}
+Alter:          {age_applicant}
+Sex. Orient.:    {sexual_orientation_applicant}
+Raucher*in:     {smoking_applicant}
+Anzahl Mitbewohner*in gesucht: {mitwohni}
+
+KONTAKT
+E-Mail:         {email}
+Telefon:        {telephone}
+
+{i}
+""".encode('utf-8')
+
+        # Create a secure SSL context
+        context = ssl.create_default_context()
+
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message)
 
     # Close browser
     driver.close()
-
-    # send email
-    # port = 587  # for starttls
-    port = 465 # for ssl
-    smtp_server = "mail.gandi.net"
-    sender_email = "info@andreashechler.com"
-    receiver_email = "info@andreashechler.com"
-    password = input("Type your password and press enter: ")
-
-    message = """Subject: python test
-This message is sent from Python."""
-
-    # Create a secure SSL context
-    context = ssl.create_default_context()
-
-    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-    # with smtplib.SMTP(smtp_server, port) as server:
-    #     server.starttls(context=context)
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message)
 
     # deploy to GitHub Actions / cronjob
 
