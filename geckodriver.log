@@ -87,3 +87,512 @@ DevTools listening on ws://localhost:48607/devtools/browser/ac20f9de-72f6-4396-9
 1637801258631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 1637801303171	Marionette	INFO	Stopped listening on port 42291
 JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637845073815	geckodriver	INFO	Listening on 127.0.0.1:49977
+1637845074322	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42309" "-no-remote" "-profile" "/tmp/rust_mozprofile0s4p7M"
+1637845075191	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0s4p7M/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42309/devtools/browser/df394274-f259-4bbd-8c45-3006249426dd
+1637845076949	Marionette	INFO	Listening on port 46507
+1637845077075	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845078760	geckodriver	INFO	Listening on 127.0.0.1:44701
+1637845079264	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45899" "-no-remote" "-profile" "/tmp/rust_mozprofileL0Hrda"
+1637845080054	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileL0Hrda/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:45899/devtools/browser/06b54077-1034-4b4e-be8a-6f94ddc1f289
+1637845081680	Marionette	INFO	Listening on port 40813
+1637845081788	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845108972	Marionette	INFO	Stopped listening on port 40813
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637845357933	geckodriver	INFO	Listening on 127.0.0.1:35685
+1637845357938	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48277" "-no-remote" "-profile" "/tmp/rust_mozprofileaH0S2r"
+1637845358660	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaH0S2r/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48277/devtools/browser/35ec76a0-29d4-43f4-9a66-a35258fb496c
+1637845360329	Marionette	INFO	Listening on port 41497
+1637845360369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845361941	geckodriver	INFO	Listening on 127.0.0.1:53621
+1637845362483	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "51233" "-no-remote" "-profile" "/tmp/rust_mozprofileCWaPl2"
+1637845363308	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCWaPl2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51233/devtools/browser/9fd82e6a-5ab5-432e-a6c6-58bfc56a0b9c
+1637845364839	Marionette	INFO	Listening on port 34529
+1637845364927	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845381710	Marionette	INFO	Stopped listening on port 34529
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637845440487	Marionette	INFO	Stopped listening on port 46507
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637845442204	Marionette	INFO	Stopped listening on port 41497
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637845451832	geckodriver	INFO	Listening on 127.0.0.1:56975
+1637845451836	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50159" "-no-remote" "-profile" "/tmp/rust_mozprofilee4pqss"
+1637845452491	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilee4pqss/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50159/devtools/browser/a80f93f0-accb-4969-a187-5e6327edc2b3
+1637845453965	Marionette	INFO	Listening on port 39737
+1637845454071	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845455559	geckodriver	INFO	Listening on 127.0.0.1:60199
+1637845456061	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35677" "-no-remote" "-profile" "/tmp/rust_mozprofileHkAmH7"
+1637845456783	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHkAmH7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35677/devtools/browser/6cfab0e4-ba12-41a2-9b67-b3b98059a1ee
+1637845458417	Marionette	INFO	Listening on port 42057
+1637845458526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637845468447	Marionette	INFO	Stopped listening on port 42057
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1637846290071	geckodriver	INFO	Listening on 127.0.0.1:38637
+1637846290079	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58821" "-no-remote" "-profile" "/tmp/rust_mozprofileIuhajt"
+1637846290698	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIuhajt/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58821/devtools/browser/27555a08-f908-4e8e-9dd9-c35f3b89b874
+1637846291983	Marionette	INFO	Listening on port 41173
+1637846292061	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846294635	geckodriver	INFO	Listening on 127.0.0.1:56659
+1637846295142	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53957" "-no-remote" "-profile" "/tmp/rust_mozprofileR0TtfK"
+1637846295806	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileR0TtfK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53957/devtools/browser/1e405e52-54ff-441b-a007-e7b3ed387b18
+1637846297505	Marionette	INFO	Listening on port 38489
+1637846297570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846303577	geckodriver	INFO	Listening on 127.0.0.1:55017
+1637846303581	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56943" "-no-remote" "-profile" "/tmp/rust_mozprofileNcD6Ez"
+1637846304501	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNcD6Ez/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56943/devtools/browser/8f5aa691-7d92-47f8-9baf-560f27e6779d
+1637846305927	Marionette	INFO	Listening on port 41339
+1637846306024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846307156	Marionette	INFO	Stopped listening on port 41339
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637846329607	Marionette	INFO	Stopped listening on port 38489
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637846336277	Marionette	INFO	Stopped listening on port 41173
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637846340660	Marionette	INFO	Stopped listening on port 39737
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637846439755	geckodriver	INFO	Listening on 127.0.0.1:43585
+1637846439759	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56331" "-no-remote" "-profile" "/tmp/rust_mozprofileyXXkW7"
+1637846440383	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyXXkW7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56331/devtools/browser/53b50b8b-6f9d-49a5-9e08-bd323eed524b
+1637846441914	Marionette	INFO	Listening on port 33839
+1637846441980	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846443484	geckodriver	INFO	Listening on 127.0.0.1:43655
+1637846443988	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36677" "-no-remote" "-profile" "/tmp/rust_mozprofileoPsx5g"
+1637846444641	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoPsx5g/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36677/devtools/browser/487f6eda-12d3-4531-803a-0f61440a0eea
+1637846445957	Marionette	INFO	Listening on port 34915
+1637846446055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846451485	geckodriver	INFO	Listening on 127.0.0.1:40193
+1637846451991	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54723" "-no-remote" "-profile" "/tmp/rust_mozprofile45YKM5"
+1637846452725	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile45YKM5/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54723/devtools/browser/a9efae5d-ac4c-4b06-86c1-6a293f38cdfb
+1637846454395	Marionette	INFO	Listening on port 35755
+1637846454425	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846455430	Marionette	INFO	Stopped listening on port 35755
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637846484206	Marionette	INFO	Stopped listening on port 33839
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637846485794	Marionette	INFO	Stopped listening on port 34915
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637846528141	geckodriver	INFO	Listening on 127.0.0.1:37643
+1637846528146	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56463" "-no-remote" "-profile" "/tmp/rust_mozprofile9hEBow"
+1637846528949	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9hEBow/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56463/devtools/browser/9fe90ad8-01e7-48e6-a113-e7b81622f45f
+1637846530547	Marionette	INFO	Listening on port 45999
+1637846530609	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846532211	Marionette	INFO	Stopped listening on port 45999
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637846532812	geckodriver	INFO	Listening on 127.0.0.1:58927
+1637846532817	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34967" "-no-remote" "-profile" "/tmp/rust_mozprofilepoUXLA"
+1637846533487	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepoUXLA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34967/devtools/browser/72976987-cacc-4969-8e1b-6dcf9f9101a7
+1637846534875	Marionette	INFO	Listening on port 40715
+1637846534960	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846540767	geckodriver	INFO	Listening on 127.0.0.1:39625
+1637846541272	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "51965" "-no-remote" "-profile" "/tmp/rust_mozprofileIheQwO"
+1637846542042	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIheQwO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51965/devtools/browser/65e9d56d-8dfd-4e07-896b-f54a52d8bf4e
+1637846543548	Marionette	INFO	Listening on port 45155
+1637846543620	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846544600	Marionette	INFO	Stopped listening on port 45155
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637846872421	geckodriver	INFO	Listening on 127.0.0.1:46191
+1637846872426	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34057" "-no-remote" "-profile" "/tmp/rust_mozprofilewIjrNL"
+1637846873169	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewIjrNL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34057/devtools/browser/2383badc-f4ca-4b09-975c-0af715dcdf29
+1637846874462	Marionette	INFO	Listening on port 37481
+1637846874572	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846876006	Marionette	INFO	Stopped listening on port 37481
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637846876622	geckodriver	INFO	Listening on 127.0.0.1:34565
+1637846877132	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54825" "-no-remote" "-profile" "/tmp/rust_mozprofileOlfTFY"
+1637846877745	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOlfTFY/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54825/devtools/browser/1c43cafb-b76a-4f16-9e39-bccdcdaf8b8e
+1637846879044	Marionette	INFO	Listening on port 46769
+1637846879101	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846884565	geckodriver	INFO	Listening on 127.0.0.1:39151
+1637846885069	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36897" "-no-remote" "-profile" "/tmp/rust_mozprofileZNYQxp"
+1637846885703	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZNYQxp/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36897/devtools/browser/a5a21087-1af2-4895-8aee-ec613439ec8e
+1637846887166	Marionette	INFO	Listening on port 40877
+1637846887206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846888161	Marionette	INFO	Stopped listening on port 40877
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637846888626	geckodriver	INFO	Listening on 127.0.0.1:51767
+1637846889139	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54589" "-no-remote" "-profile" "/tmp/rust_mozprofileD59P3h"
+1637846889796	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileD59P3h/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54589/devtools/browser/e19f9d44-7d56-439f-b4b1-ae227f032b3b
+1637846891426	Marionette	INFO	Listening on port 39437
+1637846891490	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637846892510	Marionette	INFO	Stopped listening on port 39437
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1637847102421	geckodriver	INFO	Listening on 127.0.0.1:44847
+1637847102427	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48087" "-no-remote" "-profile" "/tmp/rust_mozprofileTI92pr"
+1637847103074	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTI92pr/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48087/devtools/browser/3201e406-3447-4c04-859d-e856b1020e23
+1637847104738	Marionette	INFO	Listening on port 43013
+1637847104853	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847106318	Marionette	INFO	Stopped listening on port 43013
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637847106916	geckodriver	INFO	Listening on 127.0.0.1:60009
+1637847107425	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "40671" "-no-remote" "-profile" "/tmp/rust_mozprofileG3OojU"
+1637847108092	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileG3OojU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40671/devtools/browser/df99da72-9799-4099-8182-b74fc62b37b3
+1637847109591	Marionette	INFO	Listening on port 46673
+1637847109649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847115196	geckodriver	INFO	Listening on 127.0.0.1:52185
+1637847115710	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50505" "-no-remote" "-profile" "/tmp/rust_mozprofilefcIw2T"
+1637847116472	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefcIw2T/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50505/devtools/browser/601d7701-56db-43d2-8aab-59a032c90db9
+1637847118195	Marionette	INFO	Listening on port 33867
+1637847118245	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847119201	Marionette	INFO	Stopped listening on port 33867
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1637847549306	geckodriver	INFO	Listening on 127.0.0.1:35015
+1637847549318	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53411" "-no-remote" "-profile" "/tmp/rust_mozprofileARXKWL"
+1637847549969	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileARXKWL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53411/devtools/browser/00e276c6-e140-47fa-abdc-49d6912db035
+1637847551508	Marionette	INFO	Listening on port 39321
+1637847551544	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847553113	Marionette	INFO	Stopped listening on port 39321
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637847553725	geckodriver	INFO	Listening on 127.0.0.1:38375
+1637847554229	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33335" "-no-remote" "-profile" "/tmp/rust_mozprofileXt70Lh"
+1637847554886	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXt70Lh/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33335/devtools/browser/dee4244e-044d-45f3-babd-05f39340d605
+1637847556465	Marionette	INFO	Listening on port 34361
+1637847556560	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847562530	geckodriver	INFO	Listening on 127.0.0.1:35845
+1637847563035	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60287" "-no-remote" "-profile" "/tmp/rust_mozprofileU0M8K8"
+1637847563732	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileU0M8K8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60287/devtools/browser/4352843a-dcce-403d-a7f6-bdb65d0fa96c
+1637847565575	Marionette	INFO	Listening on port 32809
+1637847566626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847567579	Marionette	INFO	Stopped listening on port 32809
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637847602757	geckodriver	INFO	Listening on 127.0.0.1:58849
+1637847602762	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42485" "-no-remote" "-profile" "/tmp/rust_mozprofileuqNUxT"
+1637847603449	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuqNUxT/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42485/devtools/browser/691de4ed-eecf-4094-90ee-c9889ebb69ae
+1637847605250	Marionette	INFO	Listening on port 46043
+1637847605291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847607128	Marionette	INFO	Stopped listening on port 46043
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637847607746	geckodriver	INFO	Listening on 127.0.0.1:57903
+1637847608250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43331" "-no-remote" "-profile" "/tmp/rust_mozprofilernSQBK"
+1637847608939	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilernSQBK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43331/devtools/browser/2a6c7b99-bc0a-4fab-9396-67a3204944c6
+1637847610565	Marionette	INFO	Listening on port 42931
+1637847610673	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847616137	geckodriver	INFO	Listening on 127.0.0.1:46279
+1637847616635	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56461" "-no-remote" "-profile" "/tmp/rust_mozprofilevJCzBV"
+1637847617340	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevJCzBV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56461/devtools/browser/3b6646f0-4d0c-4b4f-82b4-c1b93a95ae7e
+1637847619223	Marionette	INFO	Listening on port 41273
+1637847619348	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847620819	Marionette	INFO	Stopped listening on port 41273
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637847684355	Marionette	INFO	Stopped listening on port 40715
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637847686062	Marionette	INFO	Stopped listening on port 46769
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637847687428	Marionette	INFO	Stopped listening on port 46673
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637847688487	Marionette	INFO	Stopped listening on port 34361
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637847690154	Marionette	INFO	Stopped listening on port 42931
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637847940499	geckodriver	INFO	Listening on 127.0.0.1:32909
+1637847940505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50423" "-no-remote" "-profile" "/tmp/rust_mozprofilehGJs8t"
+1637847941342	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehGJs8t/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50423/devtools/browser/36c311c6-d9b2-4080-9e27-0f0574628250
+1637847942989	Marionette	INFO	Listening on port 37215
+1637847943043	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847944661	Marionette	INFO	Stopped listening on port 37215
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637847945221	geckodriver	INFO	Listening on 127.0.0.1:33961
+1637847945725	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "40011" "-no-remote" "-profile" "/tmp/rust_mozprofilebqt4uF"
+1637847946361	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebqt4uF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40011/devtools/browser/9f1ad5a4-cdc4-4e8c-b885-aa689876ddaa
+1637847947954	Marionette	INFO	Listening on port 32781
+1637847948071	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847955619	Marionette	INFO	Stopped listening on port 32781
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637847956148	geckodriver	INFO	Listening on 127.0.0.1:50565
+1637847956652	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53521" "-no-remote" "-profile" "/tmp/rust_mozprofileWWbH4K"
+1637847957273	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWWbH4K/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53521/devtools/browser/696cf8f9-b548-47e7-8f7e-102d40a0d513
+1637847958697	Marionette	INFO	Listening on port 35047
+1637847958782	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637847959814	Marionette	INFO	Stopped listening on port 35047
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1637848583227	geckodriver	INFO	Listening on 127.0.0.1:35833
+1637848583231	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41881" "-no-remote" "-profile" "/tmp/rust_mozprofile7ukXcd"
+1637848583855	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7ukXcd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41881/devtools/browser/dc8548b7-2dbc-41bf-a73b-f41439c93001
+1637848585350	Marionette	INFO	Listening on port 46819
+1637848585471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848587089	Marionette	INFO	Stopped listening on port 46819
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637848587601	geckodriver	INFO	Listening on 127.0.0.1:56919
+1637848588108	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47481" "-no-remote" "-profile" "/tmp/rust_mozprofileMewfy8"
+1637848588724	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMewfy8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47481/devtools/browser/2e484717-26fe-49ad-b2a1-7a5cc5eff295
+1637848590183	Marionette	INFO	Listening on port 36331
+1637848590278	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848596546	Marionette	INFO	Stopped listening on port 36331
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637848597105	geckodriver	INFO	Listening on 127.0.0.1:45827
+1637848597609	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "37867" "-no-remote" "-profile" "/tmp/rust_mozprofileSWy1jB"
+1637848598339	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSWy1jB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:37867/devtools/browser/44c9f3b1-afc2-4c8a-88de-8ed414a5730a
+1637848599941	Marionette	INFO	Listening on port 37891
+1637848600645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848601769	Marionette	INFO	Stopped listening on port 37891
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637848690948	geckodriver	INFO	Listening on 127.0.0.1:44073
+1637848691455	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33835" "-no-remote" "-profile" "/tmp/rust_mozprofilegixZMp"
+1637848692072	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegixZMp/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33835/devtools/browser/6225175c-5f67-48ac-9ad5-4c990bbae101
+1637848693274	Marionette	INFO	Listening on port 43739
+1637848693389	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848694989	Marionette	INFO	Stopped listening on port 43739
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637848695542	geckodriver	INFO	Listening on 127.0.0.1:45493
+1637848696046	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33445" "-no-remote" "-profile" "/tmp/rust_mozprofileDsabWX"
+1637848696686	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDsabWX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33445/devtools/browser/f4a06c15-880b-4002-bcc7-f366ede0d925
+1637848698079	Marionette	INFO	Listening on port 46537
+1637848698227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848703838	Marionette	INFO	Stopped listening on port 46537
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637848704357	geckodriver	INFO	Listening on 127.0.0.1:41557
+1637848704861	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58105" "-no-remote" "-profile" "/tmp/rust_mozprofileegFY1f"
+1637848705510	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileegFY1f/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58105/devtools/browser/ab69d6fa-7e1f-4d33-9473-92be7aef9725
+1637848706788	Marionette	INFO	Listening on port 39207
+1637848706894	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637848707826	Marionette	INFO	Stopped listening on port 39207
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849211817	geckodriver	INFO	Listening on 127.0.0.1:58475
+1637849211821	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56175" "-no-remote" "-profile" "/tmp/rust_mozprofileQfJRv5"
+1637849212495	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileQfJRv5/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56175/devtools/browser/b44d0f79-4fa1-47a3-8fcb-c7a9d15bda2c
+1637849213995	Marionette	INFO	Listening on port 33601
+1637849214055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849215591	Marionette	INFO	Stopped listening on port 33601
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849216082	geckodriver	INFO	Listening on 127.0.0.1:41309
+1637849216593	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47259" "-no-remote" "-profile" "/tmp/rust_mozprofile5vuwYB"
+1637849217228	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5vuwYB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47259/devtools/browser/0ba3f6f6-9724-4150-9f6b-967f21ca1847
+1637849218700	Marionette	INFO	Listening on port 44743
+1637849218720	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849225810	Marionette	INFO	Stopped listening on port 44743
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849226363	geckodriver	INFO	Listening on 127.0.0.1:45287
+1637849226867	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57003" "-no-remote" "-profile" "/tmp/rust_mozprofilenhDfuO"
+1637849227557	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenhDfuO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57003/devtools/browser/02c1b883-9617-4e57-b797-ba831738a323
+1637849228961	Marionette	INFO	Listening on port 41631
+1637849228999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849230196	Marionette	INFO	Stopped listening on port 41631
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849296533	geckodriver	INFO	Listening on 127.0.0.1:60051
+1637849296538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35255" "-no-remote" "-profile" "/tmp/rust_mozprofilevtOHTR"
+1637849297285	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevtOHTR/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35255/devtools/browser/72f6df64-9133-4900-b1f2-0ef8a323f5f3
+1637849298581	Marionette	INFO	Listening on port 33863
+1637849298683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849301299	Marionette	INFO	Stopped listening on port 33863
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849301913	geckodriver	INFO	Listening on 127.0.0.1:58197
+1637849302431	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34103" "-no-remote" "-profile" "/tmp/rust_mozprofileEvD8zJ"
+1637849303063	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEvD8zJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34103/devtools/browser/2cf4ea4d-d6cc-48a4-857b-97ea5786d6dc
+1637849304293	Marionette	INFO	Listening on port 45821
+1637849304396	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849310122	Marionette	INFO	Stopped listening on port 45821
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849310716	geckodriver	INFO	Listening on 127.0.0.1:32971
+1637849311220	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49621" "-no-remote" "-profile" "/tmp/rust_mozprofileP1vO7q"
+1637849311868	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileP1vO7q/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49621/devtools/browser/0c321bfa-efba-4a9a-b45e-9823e48ab890
+1637849313271	Marionette	INFO	Listening on port 38991
+1637849313351	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849331042	geckodriver	INFO	Listening on 127.0.0.1:35997
+1637849331545	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33285" "-no-remote" "-profile" "/tmp/rust_mozprofilej6kd1C"
+1637849332247	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilej6kd1C/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33285/devtools/browser/ba3fb210-e81d-4435-a4c4-7adf3ea6858c
+1637849334076	Marionette	INFO	Listening on port 41455
+1637849334174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849334968	Marionette	INFO	Stopped listening on port 38991
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637849335926	Marionette	INFO	Stopped listening on port 41455
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849336479	geckodriver	INFO	Listening on 127.0.0.1:49527
+1637849336983	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39719" "-no-remote" "-profile" "/tmp/rust_mozprofile11QqaK"
+1637849337626	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile11QqaK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:39719/devtools/browser/2b68812f-16be-4db4-b6a5-003730b077de
+1637849338888	Marionette	INFO	Listening on port 35061
+1637849338983	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849344849	Marionette	INFO	Stopped listening on port 35061
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1637849345483	geckodriver	INFO	Listening on 127.0.0.1:49427
+1637849345987	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35361" "-no-remote" "-profile" "/tmp/rust_mozprofileQ2D8zj"
+1637849346706	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileQ2D8zj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35361/devtools/browser/7f6cc195-d6a8-491b-9870-6873d086770e
+1637849348416	Marionette	INFO	Listening on port 44127
+1637849348520	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849349674	Marionette	INFO	Stopped listening on port 44127
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849460436	geckodriver	INFO	Listening on 127.0.0.1:39117
+1637849460442	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "40521" "-no-remote" "-profile" "/tmp/rust_mozprofileB22eQl"
+1637849461283	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileB22eQl/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40521/devtools/browser/8818701a-e7ee-4f5a-87e3-487c18862bf6
+1637849462764	Marionette	INFO	Listening on port 37053
+1637849462868	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849464357	Marionette	INFO	Stopped listening on port 37053
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849464925	geckodriver	INFO	Listening on 127.0.0.1:38947
+1637849465429	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35021" "-no-remote" "-profile" "/tmp/rust_mozprofilero2X5m"
+1637849466157	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilero2X5m/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35021/devtools/browser/ac13147d-0e5e-4c7f-91d7-8e03a5bfeaf3
+1637849467561	Marionette	INFO	Listening on port 43643
+1637849467662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849473967	Marionette	INFO	Stopped listening on port 43643
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1637849474618	geckodriver	INFO	Listening on 127.0.0.1:40305
+1637849475127	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "46623" "-no-remote" "-profile" "/tmp/rust_mozprofileKuFRVe"
+1637849475893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKuFRVe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:46623/devtools/browser/bc648043-07c6-4ebe-896a-12cf06eb4ac9
+1637849477179	Marionette	INFO	Listening on port 37985
+1637849477284	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637849478333	Marionette	INFO	Stopped listening on port 37985
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]

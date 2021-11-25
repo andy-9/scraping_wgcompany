@@ -8,7 +8,35 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
 
-def scrape_site():
+# TODO: alles in mehrere Funktionen zerlegen
+# TODO: mehrere Module?
+# TODO: docstrings bei Funktionen
+# TODO: Typisierung bei Parametern
+# TODO: secrets_file with password
+
+
+def german_to_english(date: str) -> str:
+    # replace German with English months
+    if 'Januar' in date:
+        date = date.replace('Januar', 'January')
+    if 'Februar' in date:
+        date = date.replace('Februar', 'February')
+    if 'März' in date:
+        date = date.replace('März', 'March')
+    if 'Mai' in date:
+        date = date.replace('Mai', 'May')
+    if 'Juni' in date:
+        date = date.replace('Juni', 'June')
+    if 'Juli' in date:
+        date = date.replace('Juli', 'July')
+    if 'Oktober' in date:
+        date = date.replace('Oktober', 'October')
+    if 'Dezember' in date:
+        date = date.replace('Dezember', 'December')
+    return date
+
+
+def get_links_wg_offers():
     driver = webdriver.Firefox()
     driver.get('http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100')
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
@@ -32,6 +60,15 @@ def scrape_site():
     # Put links in list
     links = [link.get_attribute('href') for link in search_results]
 
+    # Close browser
+    driver.close()
+
+    return links
+
+
+def get_recent_dates(links: list) -> list:
+    driver = webdriver.Firefox()
+
     # list of entry-date-objects
     date_list = []
 
@@ -51,37 +88,29 @@ def scrape_site():
         # apply regex-pattern on html/link
         result = date_pattern.search(wg_site)
         if result:
-            date = result[1]
-
             # replace German with English months
-            if 'Januar' in date:
-                date = date.replace('Januar', 'January')
-            if 'Februar' in date:
-                date = date.replace('Februar', 'February')
-            if 'März' in date:
-                date = date.replace('März', 'March')
-            if 'Mai' in date:
-                date = date.replace('Mai', 'May')
-            if 'Juni' in date:
-                date = date.replace('Juni', 'June')
-            if 'Juli' in date:
-                date = date.replace('Juli', 'July')
-            if 'Oktober' in date:
-                date = date.replace('Oktober', 'October')
-            if 'Dezember' in date:
-                date = date.replace('Dezember', 'December')
+            date = german_to_english(result[1])
 
             # parse date-string and append to date_list
             date_obj = datetime.strptime(date, '%d. %B %Y')
-            # date_list.append((date_obj, link))  # append content in parentheses from string-pattern (= date)
-            date_list.append((date_obj, link))  # append content in parentheses from string-pattern (= date) and link
-            # as tuple
 
-    # get date one week ago
-    date_some_days_ago = datetime.now() + timedelta(days=-4)  # TODO: Change days to 1 or 2 later
+            # append content in parentheses from string-pattern (= date) and wg-link as tuple
+            date_list.append((date_obj, link))
 
-    # get link list from entries from the past 7 days
+    # get date 2 days ago
+    date_some_days_ago = datetime.now() + timedelta(days=-2)  # TODO: Change days to -1 ?
+
+    # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
+
+    # Close browser
+    driver.close()
+
+    return recent_entries_link_list
+
+
+def get_wg_info(recent_entries_link_list: list):
+    driver = webdriver.Firefox()
 
     # loop through list to get the data I want
     for i in recent_entries_link_list:
@@ -89,7 +118,7 @@ def scrape_site():
         assert 'WGcompany' in driver.title, '"WGcompany" not in title'
 
         entry_date = driver.find_element(By.XPATH, '/html/body/table/tbody/tr[1]/td[2]/div[2]/font').text
-        date_pattern = re.compile(r'\d{1,2}\.\s\w+\s\d{4}')
+        date_pattern = re.compile(r'\d{1,2}\.\s\w+\s\d{4}')  # e.g. 24. November 2021
         date = date_pattern.search(entry_date)[0]
 
         room = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]').text[0]
@@ -100,18 +129,20 @@ def scrape_site():
 
         district = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]/b[4]').text
 
-        # wg_ueberblick = driver.find_element('//*[@id="content"]/table[1]/tbody/tr[2]/td[1]').text
-        # address_pattern = re.compile(r'((\w+)\s)?((\w+)\s)?\w+\.?\s?\(\S+,\s(\w+)?\)')
-        # address = address_pattern.search(wg_ueberblick)[0]
-
         wg_ueberblick = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]').text
+
         address_pattern = re.compile(r'(((\w+)\s)?((\w+)\s)?\w+\.?)\s?\((\S+,\s(\w+)?)\)')
         adress_string = address_pattern.search(wg_ueberblick)  # e.g. "Plesser Straße 7 (2.OG, VH)"
         temp_address = adress_string.group(1)  # might still contain the bezirk
         address_pattern_2 = re.compile(r'(\w+\n)?(\w+\.?\s?\w*\.?\s?\d*)')  # pattern looks for new line (\n)
         address_string_2 = address_pattern_2.search(temp_address)
         address = address_string_2.group(2)
-        geschoss = adress_string.group(6)
+
+        temp_geschoss = adress_string.group(6)  # e.g. "2.OG, "
+        geschoss_pattern_2 = re.compile(r'(.*)\,?\s?$')  # pattern looks for comma and whitespace at the end
+        geschoss_string_2 = geschoss_pattern_2.search(temp_geschoss)
+        geschoss = geschoss_string_2.group(1)
+        print(geschoss)
 
         available_from = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]/b[5]').text
 
@@ -121,7 +152,7 @@ def scrape_site():
         email = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[3]/a').text
         telephone = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[3]/td[2]').text
 
-        ad_text = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[5]/td/blockquote').text\
+        ad_text = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[5]/td/blockquote').text \
             .replace('\n\n', '\n').strip()
 
         how_long = driver.find_element(By.XPATH, '//*[@id="content"]/table[2]/tbody/tr[2]/td[2]/b').text.strip()
@@ -197,16 +228,34 @@ def scrape_site():
         mitwohni = driver.find_element(By.XPATH, '/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td['
                                                  '4]/b').text.strip()
 
-        # send email
-        port = 465  # for ssl
-        smtp_server = "mail.gandi.net"
-        sender_email = "info@andreashechler.com"
-        receiver_email = "info@andreashechler.com"
-        password = input("Type your password and press enter: ")
+        # Close browser
+        driver.close()
 
-        message = f"""Subject: WG-Company: neue WG
+        return date, room, square_meters, size_of_wg, district, address, geschoss, available_from, price, \
+            nebenkosten, email, telephone, ad_text, how_long, furnished, balcony, floor, heating, abstand, \
+            house_type, wg_size, amount_of_rooms, animals_allowed, tv, smoking_wg, gender_wg, children_wg, age_wg, \
+            sexual_orientation_wg, nutrition_wg, art_wg, gender_applicant, children_applicant, age_applicant, \
+            sexual_orientation_applicant, smoking_applicant, mitwohni, i
+
+
+def send_mail(date: str, room: str, square_meters: str, size_of_wg: str, district: str, address: str, geschoss: str,
+              available_from: str, price: str, nebenkosten: str, email: str, telephone: str, ad_text: str,
+              how_long: str, furnished: str, balcony: str, floor: str, heating: str, abstand: str, house_type: str,
+              wg_size: str, amount_of_rooms: str, animals_allowed: str, tv: str, smoking_wg: str, gender_wg: str,
+              children_wg: str, age_wg: str, sexual_orientation_wg: str, nutrition_wg: str, art_wg: str,
+              gender_applicant: str, children_applicant: str, age_applicant: str, sexual_orientation_applicant: str,
+              smoking_applicant: str, mitwohni: str, link: str):
+    # send email
+
+    port = 465  # for ssl
+    smtp_server = "mail.gandi.net"
+    sender_email = "info@andreashechler.com"
+    receiver_email = "info@andreashechler.com"
+    password = input("Type your password and press enter: ")
+
+    message = f"""Subject: WG-Company: neue WG in {district}
 WG-ÜBERBLICK
-Datum:          {date}
+
 Zimmeranzahl:   {room}
 Quadratmeter:   {square_meters}
 WG-Größe:       {size_of_wg}
@@ -216,7 +265,8 @@ Geschoss:       {geschoss}
 Frei ab:        {available_from}
 Miete:          {price} {nebenkosten}
 
-Anzeigentext:   {ad_text}
+Anzeigentext:
+{ad_text}
 
 DAS ZIMMER
 Wie lange:      {how_long}
@@ -254,24 +304,38 @@ KONTAKT
 E-Mail:         {email}
 Telefon:        {telephone}
 
-{i}
+Einstelldatum:  {date}
+{link}
 """.encode('utf-8')
 
-        # Create a secure SSL context
-        context = ssl.create_default_context()
+    # Create a secure SSL context
+    context = ssl.create_default_context()
 
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver_email, message)
+    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, message)
 
-    # Close browser
-    driver.close()
 
-    # deploy to GitHub Actions / cronjob
+# deploy to GitHub Actions / cronjob
 
 
 def main():
-    scrape_site()
+    links = get_links_wg_offers()
+
+    recent_entries_link_list = get_recent_dates(links)
+
+    wg_info = get_wg_info(recent_entries_link_list)  # wg_info is tuple with 37 string-values
+
+    send_mail(date=wg_info[0], room=wg_info[1], square_meters=wg_info[2], size_of_wg=wg_info[3], district=wg_info[4],
+              address=wg_info[5], geschoss=wg_info[6], available_from=wg_info[7], price=wg_info[8],
+              nebenkosten=wg_info[9], email=wg_info[10], telephone=wg_info[11], ad_text=wg_info[12],
+              how_long=wg_info[13], furnished=wg_info[14], balcony=wg_info[15], floor=wg_info[16], heating=wg_info[17],
+              abstand=wg_info[18], house_type=wg_info[19], wg_size=wg_info[20], amount_of_rooms=wg_info[21],
+              animals_allowed=wg_info[22], tv=wg_info[23], smoking_wg=wg_info[24], gender_wg=wg_info[25],
+              children_wg=wg_info[26], age_wg=wg_info[27], sexual_orientation_wg=wg_info[28], nutrition_wg=wg_info[29],
+              art_wg=wg_info[30], gender_applicant=wg_info[31], children_applicant=wg_info[32],
+              age_applicant=wg_info[33], sexual_orientation_applicant=wg_info[34], smoking_applicant=wg_info[35],
+              mitwohni=wg_info[36], link=wg_info[37])
 
 
 if __name__ == '__main__':
