@@ -1,2 +1,4 @@
 secrets.py
-secrets
+secrets.*
+*pycache*/
+.gitignore
