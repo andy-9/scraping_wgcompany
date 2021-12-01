@@ -20,5 +20,10 @@ jobs:
           pip install pipenv
           pipenv install
           pipenv run python main.py
-        with:
-          password: ${{ secrets.PASSWORD }}
+
+
+
+#          steps:
+#            - name: Hello world action
+#              with: # Set the secret as an input
+#                password: ${{ secrets.PASSWORD }}
