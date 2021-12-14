@@ -1,13 +1,18 @@
+import os
 import re
 import smtplib
 import ssl
 
 from datetime import datetime, timedelta
-from secrets import password
 from typing import Tuple
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+
+try:
+    from secrets import password
+except ImportError:
+    password = os.environ['PASSWORD']  # name of GitHub secret
 
 
 # TODO: deploy to GitHub Actions / cronjob
