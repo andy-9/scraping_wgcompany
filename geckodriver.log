@@ -1341,3 +1341,262 @@ JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILU
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1639503327689	geckodriver	INFO	Listening on 127.0.0.1:35169
+1639503328192	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "57427" "-no-remote" "-profile" "/tmp/rust_mozprofilegd8Ap8"
+*** You are running in headless mode.
+1639503328507	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegd8Ap8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57427/devtools/browser/e429b4c6-27e6-46cf-845f-be745590c38b
+1639503329561	Marionette	INFO	Listening on port 37393
+1639503329627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503331056	Marionette	INFO	Stopped listening on port 37393
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503331547	geckodriver	INFO	Listening on 127.0.0.1:32921
+1639503332073	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58301" "-no-remote" "-profile" "/tmp/rust_mozprofileyK8McA"
+1639503332671	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyK8McA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58301/devtools/browser/77804569-d6df-4c6b-ba02-735fe1e00f84
+1639503334043	Marionette	INFO	Listening on port 41299
+1639503334103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503341054	Marionette	INFO	Stopped listening on port 41299
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639503341709	geckodriver	INFO	Listening on 127.0.0.1:48471
+1639503342212	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47853" "-no-remote" "-profile" "/tmp/rust_mozprofileS52oCT"
+1639503343022	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileS52oCT/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47853/devtools/browser/e4796abe-3aa0-495e-9181-637233b85e67
+1639503344497	Marionette	INFO	Listening on port 36179
+1639503344536	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503345655	Marionette	INFO	Stopped listening on port 36179
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503347397	geckodriver	INFO	Listening on 127.0.0.1:37837
+1639503347916	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48609" "-no-remote" "-profile" "/tmp/rust_mozprofileXgbRva"
+1639503348718	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXgbRva/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48609/devtools/browser/eae582a6-0dce-42bc-8921-88f3d0da8c52
+1639503350195	Marionette	INFO	Listening on port 33371
+1639503350244	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503351281	Marionette	INFO	Stopped listening on port 33371
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503353167	geckodriver	INFO	Listening on 127.0.0.1:53191
+1639503353678	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59601" "-no-remote" "-profile" "/tmp/rust_mozprofileymHhYt"
+1639503354679	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileymHhYt/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59601/devtools/browser/a5f4c375-5ef9-45f1-8efb-b4a64d5a4848
+1639503356177	Marionette	INFO	Listening on port 40701
+1639503356221	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503357159	Marionette	INFO	Stopped listening on port 40701
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503358679	geckodriver	INFO	Listening on 127.0.0.1:49239
+1639503359183	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52675" "-no-remote" "-profile" "/tmp/rust_mozprofile0m5PJO"
+1639503359801	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0m5PJO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52675/devtools/browser/ad77ea65-bcbe-4f14-9a89-3683a12c70e2
+1639503361565	Marionette	INFO	Listening on port 35895
+1639503361616	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503362817	Marionette	INFO	Stopped listening on port 35895
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639503364315	geckodriver	INFO	Listening on 127.0.0.1:59075
+1639503364322	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52489" "-no-remote" "-profile" "/tmp/rust_mozprofilewQWVge"
+1639503365443	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewQWVge/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/SearchService.jsm, line 213: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+
+JavaScript error: resource://gre/modules/SearchService.jsm, line 213: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+
+JavaScript error: resource://gre/modules/SearchService.jsm, line 213: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+
+JavaScript error: resource:///modules/UrlbarView.jsm, line 2163: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]' when calling method: [nsISearchService::defaultEngine]
+JavaScript error: resource:///modules/UrlbarView.jsm, line 2163: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]' when calling method: [nsISearchService::defaultEngine]
+JavaScript error: resource:///modules/UrlbarView.jsm, line 2163: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:213:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2157:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2289:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2163:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1354:52
+_on_input@resource:///modules/UrlbarInput.jsm:3029:10
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 213}]' when calling method: [nsISearchService::defaultEngine]
+DevTools listening on ws://localhost:52489/devtools/browser/bb91f2e2-4a32-4d16-8220-b44d7afe1560
+1639503368266	Marionette	INFO	Listening on port 40455
+1639503368381	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503369355	Marionette	INFO	Stopped listening on port 40455
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503504738	geckodriver	INFO	Listening on 127.0.0.1:56489
+1639503504747	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "59283" "-no-remote" "-profile" "/tmp/rust_mozprofileaM9UOK"
+*** You are running in headless mode.
+1639503505071	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaM9UOK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59283/devtools/browser/aa4ea6e7-58bd-4ecd-b180-a7487e1de48b
+1639503506091	Marionette	INFO	Listening on port 43521
+1639503506170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503507535	Marionette	INFO	Stopped listening on port 43521
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503507948	geckodriver	INFO	Listening on 127.0.0.1:38613
+1639503508485	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "49639" "-no-remote" "-profile" "/tmp/rust_mozprofileSCuG8d"
+*** You are running in headless mode.
+1639503508785	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSCuG8d/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49639/devtools/browser/aea8e983-5889-4443-b075-01763bfb964c
+1639503509845	Marionette	INFO	Listening on port 39127
+1639503509919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503515712	Marionette	INFO	Stopped listening on port 39127
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503516194	geckodriver	INFO	Listening on 127.0.0.1:55443
+1639503516703	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "54265" "-no-remote" "-profile" "/tmp/rust_mozprofileMabxQx"
+*** You are running in headless mode.
+1639503516991	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMabxQx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54265/devtools/browser/09b0b143-8e09-4903-8df4-c9a40bbeff9b
+1639503518149	Marionette	INFO	Listening on port 33293
+1639503518241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503518952	Marionette	INFO	Stopped listening on port 33293
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503520369	geckodriver	INFO	Listening on 127.0.0.1:43205
+1639503520884	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "38345" "-no-remote" "-profile" "/tmp/rust_mozprofilegLpQuc"
+*** You are running in headless mode.
+1639503521179	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegLpQuc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38345/devtools/browser/919b952c-b72f-473d-a3cf-c6fff76a5cea
+1639503522259	Marionette	INFO	Listening on port 39919
+1639503522306	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503523253	Marionette	INFO	Stopped listening on port 39919
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639503524432	geckodriver	INFO	Listening on 127.0.0.1:38827
+1639503524961	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "37353" "-no-remote" "-profile" "/tmp/rust_mozprofileZBQjkG"
+*** You are running in headless mode.
+1639503525287	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZBQjkG/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:37353/devtools/browser/7308df73-3781-40b5-8190-7a84c429ce5c
+1639503526324	Marionette	INFO	Listening on port 33455
+1639503526392	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503527060	Marionette	INFO	Stopped listening on port 33455
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639503528410	geckodriver	INFO	Listening on 127.0.0.1:49939
+1639503528922	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "54941" "-no-remote" "-profile" "/tmp/rust_mozprofileTPJmCD"
+*** You are running in headless mode.
+1639503529264	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTPJmCD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54941/devtools/browser/932e58d9-4573-447e-aa0b-89b4cfe063d8
+1639503530297	Marionette	INFO	Listening on port 43589
+1639503530345	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503531154	Marionette	INFO	Stopped listening on port 43589
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639503532652	geckodriver	INFO	Listening on 127.0.0.1:35199
+1639503533157	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "39403" "-no-remote" "-profile" "/tmp/rust_mozprofilep6Ebgs"
+*** You are running in headless mode.
+1639503533700	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilep6Ebgs/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:39403/devtools/browser/c17d2b35-3785-40ef-b3d1-44a3517ff9d7
+1639503535323	Marionette	INFO	Listening on port 41121
+1639503535399	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639503536138	Marionette	INFO	Stopped listening on port 41121
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]

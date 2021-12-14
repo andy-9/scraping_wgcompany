@@ -44,8 +44,18 @@ def german_to_english(date: str) -> str:
     return date
 
 
+def run_firefox():
+    options = webdriver.FirefoxOptions()
+    options.headless = True
+    driver = webdriver.Firefox(options=options)
+    return driver
+
+
 def get_links_wg_offers() -> list:
-    driver = webdriver.Firefox()
+    # options = webdriver.FirefoxOptions()
+    # options.headless = True
+    # driver = webdriver.Firefox(options=options)
+    driver = run_firefox()
     driver.get('http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100')
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
 
@@ -75,7 +85,8 @@ def get_links_wg_offers() -> list:
 
 
 def get_recent_dates(links: list) -> list:
-    driver = webdriver.Firefox()
+    # driver = webdriver.Firefox()
+    driver = run_firefox()
 
     # list of entry-date-objects
     date_list = []
@@ -121,7 +132,8 @@ def get_wg_info(link: str) -> Tuple[str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str]:
 
-    driver = webdriver.Firefox()
+    # driver = webdriver.Firefox()
+    driver = run_firefox()
     driver.get(link)
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
 
