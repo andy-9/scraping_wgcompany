@@ -4,15 +4,15 @@ import smtplib
 import ssl
 
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 from typing import Tuple
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-try:
-    from secrets import password
-except ImportError:
-    password = os.environ['PASSWORD']  # name of GitHub secret
+
+load_dotenv()  # file with environment variables for secrets
+password = os.environ['PASSWORD']  # name of GitHub secret
 
 
 # TODO: deploy to GitHub Actions / cronjob
@@ -319,9 +319,9 @@ Einstelldatum:  {date}
 {link}
 """.encode('utf-8')
 
-    smtp_server = "mail.gandi.net"
+    smtp_server = "mail.gandi.net"  # TODO: all das in GH-secrets
     port = 465  # ssl
-    sender_email = "info@andreashechler.com"
+    sender_email = "info@andreashechler.com"  # TODO: add name of sender
     receiver_email = ["info@andreashechler.com"]
 
     # Create a secure SSL context

@@ -1,13 +1,13 @@
 name: send daily email
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # be able to run manually on GitHub
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # run every midnight
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # most current os
 
     steps:
       - uses: actions/checkout@v2  # check out repo so a workflow can access it
@@ -16,19 +16,12 @@ jobs:
         with:
           python-version: '3.8'
       - name: Prepare Firefox
-        uses: browser-actions/setup-firefox@latest
-      - name: Firefox version
+        uses: browser-actions/setup-firefox@latest  # install firefox
+      - name: Firefox version  # check if firefox is installed
         run: firefox --version
       - name: Install dependencies and send email
         env:  # setup env
           PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
         run: |  # install dependencies and run main.py
-          pip install -r requirements.txt  
+          pip install -r requirements.txt
           python main.py
-
-
-
-#          steps:
-#            - name: Hello world action
-#              with: # Set the secret as an input
-#                password: ${{ secrets.PASSWORD }}
