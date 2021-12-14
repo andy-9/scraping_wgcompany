@@ -16,13 +16,11 @@ jobs:
         with:
           python-version: '3.8'
       - name: Install dependencies and send email
-        env:
-          PASSWORD: ${{ secrets.PASSWORD }}
-        run: |
-          python -m pip install --upgrade pip
-          pip install pipenv
-          pipenv install
-          pipenv run python main.py
+        env:  # setup env
+          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
+        run: |  # install dependencies and run main.py
+          pip install -r requirements.txt  
+          python main.py
 
 
 
