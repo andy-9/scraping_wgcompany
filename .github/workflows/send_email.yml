@@ -15,6 +15,10 @@ jobs:
         uses: actions/setup-python@v2  # sets up a python environment
         with:
           python-version: '3.8'
+      - name: Prepare Firefox
+        uses: browser-actions/setup-firefox@latest
+      - name: Firefox version
+        run: firefox --version
       - name: Install dependencies and send email
         env:  # setup env
           PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
