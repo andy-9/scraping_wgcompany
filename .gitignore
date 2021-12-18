@@ -1,5 +1,0 @@
-secrets.py
-secrets.*
-*pycache*/
-.gitignore
-.env
