@@ -15,11 +15,10 @@ load_dotenv()  # file with environment variables for secrets
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
-# TODO: deploy to GitHub Actions / cronjob
-# TODO: alles in mehrere Funktionen zerlegen (?)
+# TODO: Change days to -2 in function get_recent_dates()
 # TODO: docstrings bei Funktionen
 # TODO: poetry
-# TODO: Change days to -1 in function get_recent_dates()?
+# TODO: black
 # TODO: write README.md
 
 
@@ -117,7 +116,7 @@ def get_recent_dates(links: list) -> list:
             date_list.append((date_obj, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-2)
+    date_some_days_ago = datetime.now() + timedelta(days=-4)  # TODO: -2
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
