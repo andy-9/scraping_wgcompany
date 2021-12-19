@@ -12,14 +12,20 @@ from selenium.webdriver.support.ui import Select
 
 
 load_dotenv()  # file with environment variables for secrets
+smtp_server = os.environ['SMTP_SERVER']
+port = int(os.environ['PORT'])
+sender_email = os.environ['SENDER_EMAIL']
+receiver_email = os.environ['RECEIVER_EMAIL']
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
-# TODO: Change days to -2 in function get_recent_dates()
+# TODO: add name of sender
 # TODO: docstrings bei Funktionen
 # TODO: poetry
 # TODO: black
 # TODO: write README.md
+print(receiver_email)
+print(receiver_email.split(','))
 
 
 def german_to_english(date: str) -> str:
@@ -116,7 +122,7 @@ def get_recent_dates(links: list) -> list:
             date_list.append((date_obj, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-4)  # TODO: -2
+    date_some_days_ago = datetime.now() + timedelta(days=-2)
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
@@ -318,11 +324,6 @@ Einstelldatum:  {date}
 {link}
 """.encode('utf-8')
 
-    smtp_server = "mail.gandi.net"  # TODO: all das in GH-secrets
-    port = 465  # ssl
-    sender_email = "info@andreashechler.com"  # TODO: add name of sender
-    receiver_email = ["info@andreashechler.com"]
-
     # Create a secure SSL context
     context = ssl.create_default_context()
 
@@ -338,16 +339,17 @@ def main():
 
     for i in recent_entries_link_list:
         wg_info = get_wg_info(i)  # wg_info is tuple with 37 string-values
-        send_mail(date=wg_info[0], room=wg_info[1], square_meters=wg_info[2], size_of_wg=wg_info[3], district=wg_info[4],
-                  address=wg_info[5], geschoss=wg_info[6], available_from=wg_info[7], price=wg_info[8],
-                  nebenkosten=wg_info[9], email=wg_info[10], telephone=wg_info[11], ad_text=wg_info[12],
-                  how_long=wg_info[13], furnished=wg_info[14], balcony=wg_info[15], floor=wg_info[16], heating=wg_info[17],
-                  abstand=wg_info[18], house_type=wg_info[19], wg_size=wg_info[20], amount_of_rooms=wg_info[21],
-                  animals_allowed=wg_info[22], tv=wg_info[23], smoking_wg=wg_info[24], gender_wg=wg_info[25],
-                  children_wg=wg_info[26], age_wg=wg_info[27], sexual_orientation_wg=wg_info[28], nutrition_wg=wg_info[29],
-                  art_wg=wg_info[30], gender_applicant=wg_info[31], children_applicant=wg_info[32],
-                  age_applicant=wg_info[33], sexual_orientation_applicant=wg_info[34], smoking_applicant=wg_info[35],
-                  mitwohni=wg_info[36], link=wg_info[37])
+        send_mail(date=wg_info[0], room=wg_info[1], square_meters=wg_info[2], size_of_wg=wg_info[3],
+                  district=wg_info[4], address=wg_info[5], geschoss=wg_info[6], available_from=wg_info[7],
+                  price=wg_info[8], nebenkosten=wg_info[9], email=wg_info[10], telephone=wg_info[11],
+                  ad_text=wg_info[12], how_long=wg_info[13], furnished=wg_info[14], balcony=wg_info[15],
+                  floor=wg_info[16], heating=wg_info[17], abstand=wg_info[18], house_type=wg_info[19],
+                  wg_size=wg_info[20], amount_of_rooms=wg_info[21], animals_allowed=wg_info[22], tv=wg_info[23],
+                  smoking_wg=wg_info[24], gender_wg=wg_info[25], children_wg=wg_info[26], age_wg=wg_info[27],
+                  sexual_orientation_wg=wg_info[28], nutrition_wg=wg_info[29], art_wg=wg_info[30],
+                  gender_applicant=wg_info[31], children_applicant=wg_info[32], age_applicant=wg_info[33],
+                  sexual_orientation_applicant=wg_info[34], smoking_applicant=wg_info[35], mitwohni=wg_info[36],
+                  link=wg_info[37])
 
 
 if __name__ == '__main__':
