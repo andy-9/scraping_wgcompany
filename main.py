@@ -15,7 +15,7 @@ load_dotenv()  # file with environment variables for secrets
 smtp_server = os.environ['SMTP_SERVER']
 port = int(os.environ['PORT'])
 sender_email = os.environ['SENDER_EMAIL']
-receiver_email = os.environ['RECEIVER_EMAIL']
+receiver_email = os.environ['RECEIVER_EMAIL'].split(',')
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
@@ -24,8 +24,6 @@ password = os.environ['PASSWORD']  # name of GitHub secret
 # TODO: poetry
 # TODO: black
 # TODO: write README.md
-print(receiver_email)
-print(receiver_email.split(','))
 
 
 def german_to_english(date: str) -> str:
