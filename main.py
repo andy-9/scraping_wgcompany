@@ -119,7 +119,7 @@ def get_recent_dates(links: list) -> list:
             date_list.append((date_obj, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-8) # TODO: ändern auf -2
+    date_some_days_ago = datetime.now() + timedelta(days=-2)
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]

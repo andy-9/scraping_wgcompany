@@ -1556,3 +1556,9 @@ console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639958813376	Marionette	INFO	Stopped listening on port 36527
+1639958813413	Marionette	INFO	Stopped listening on port 44959
+1639958813526	Marionette	INFO	Stopped listening on port 45501
+1639958813667	Marionette	INFO	Stopped listening on port 45819
