@@ -5,10 +5,10 @@ import ssl
 
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
-from typing import Tuple
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from typing import Tuple
 
 
 load_dotenv()  # file with environment variables for secrets
@@ -19,7 +19,6 @@ receiver_email = os.environ['RECEIVER_EMAIL'].split(',')
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
-# TODO: add name of sender
 # TODO: docstrings bei Funktionen
 # TODO: poetry
 # TODO: black
@@ -120,7 +119,7 @@ def get_recent_dates(links: list) -> list:
             date_list.append((date_obj, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-2)
+    date_some_days_ago = datetime.now() + timedelta(days=-8) # TODO: ändern auf -2
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
@@ -153,13 +152,14 @@ def get_wg_info(link: str) -> Tuple[str, str, str, str, str, str, str, str, str,
     district = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]/b[4]').text
 
     wg_ueberblick = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]').text
+    # print("0:", wg_ueberblick)
 
-    address_pattern = re.compile(r'(((\w+)\s)?((\w+)\s)?\w+\.?)\s?\((\S+,\s(\w+)?)\)')
+    address_pattern = re.compile(r'(((\w+\s)*(\w+\.?\s?(\d*)?))\s?\((\S+,\s(\w+)?)\))')
     adress_string = address_pattern.search(wg_ueberblick)  # e.g. "Plesser Straße 7 (2.OG, VH)"
-    temp_address = adress_string.group(1)  # might still contain the bezirk
-    address_pattern_2 = re.compile(r'(\w+\n)?(\w+\.?\s?\w*\.?\s?\d*)')  # pattern looks for new line (\n)
-    address_string_2 = address_pattern_2.search(temp_address)
-    address = address_string_2.group(2)
+    address = adress_string.group(2)  # might still contain the district
+
+    if '\n' in address:
+        address = address.split('\n')[1]  # without district
 
     geschoss = adress_string.group(6)  # e.g. "DG, "
     if geschoss.endswith(', '):
