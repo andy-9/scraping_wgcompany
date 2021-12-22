@@ -134,7 +134,6 @@ def get_wg_info(link: str) -> Tuple[str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str]:
 
-    # driver = webdriver.Firefox()
     driver = run_firefox()
     driver.get(link)
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
@@ -266,6 +265,51 @@ def send_mail(date: str, room: str, square_meters: str, size_of_wg: str, distric
               children_wg: str, age_wg: str, sexual_orientation_wg: str, nutrition_wg: str, art_wg: str,
               gender_applicant: str, children_applicant: str, age_applicant: str, sexual_orientation_applicant: str,
               smoking_applicant: str, mitwohni: str, link: str):
+    """
+    Function to send an email with all relevant info (in variables) in the message-body.
+    Email is send through SSL-connection.
+    smtp_server, port, sender_email, password and receiver_email are global variables in .env-file (locally) and in
+    GitHub secrets remote for GitHub actions.
+    :param date: string, date the ad went online
+    :param room: string, amount of rooms
+    :param square_meters: string, size of room in square meters
+    :param size_of_wg: string, size of apartment in square meters
+    :param district: string, district wg is located at
+    :param address: string, address of wg
+    :param geschoss: string, wg is on which floor
+    :param available_from: string, room available from
+    :param price: string, price of room
+    :param nebenkosten: string, additional costs
+    :param email: string, email-address
+    :param telephone: string, telephone-number
+    :param ad_text: string, wg about themselves
+    :param how_long: string, room for how long (permanent is default)
+    :param furnished: string, room furnished or not
+    :param balcony: string, balcony or not
+    :param floor: string, type of floor
+    :param heating: string, what kind of heating
+    :param abstand: string, balance payment
+    :param house_type: string, type of house (new or old)
+    :param wg_size: string, size of wg
+    :param amount_of_rooms: string, amount of rooms
+    :param animals_allowed: string, animals allowed or not
+    :param tv: string, what kind of tv connection
+    :param smoking_wg: string, smoking or not
+    :param gender_wg: string, gender of people in wg
+    :param children_wg: string, amount of children in wg
+    :param age_wg: string, age of people in wg
+    :param sexual_orientation_wg: string, sexual orientation of people in wg
+    :param nutrition_wg: string, nutrition of wg
+    :param art_wg: string, wg is how close
+    :param gender_applicant: string, gender of applicant
+    :param children_applicant: string, applicant has (how many) children
+    :param age_applicant: string, age of applicant
+    :param sexual_orientation_applicant: string, sexual orientation of applicant
+    :param smoking_applicant: string, applicant can smoke in wg or not
+    :param mitwohni: string, wg is looking for how many people
+    :param link: string, link af wg-ad
+    :return: no return value
+    """
 
     message = f"""Subject: WG-Company: neue WG in {district}
 WG-ÜBERBLICK
@@ -331,6 +375,11 @@ Einstelldatum:  {date}
 
 
 def main():
+    """
+    Main function invokes other functions in correct order: get all links of offers, sort to get only the recent
+    ones, iterate through those to get wg-info and send email.
+    :return: no return value
+    """
     links = get_links_wg_offers()
 
     recent_entries_link_list = get_recent_dates(links=links)
