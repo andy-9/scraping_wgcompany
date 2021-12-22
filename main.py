@@ -310,13 +310,13 @@ WIR SUCHEN
 Geschlecht:     {gender_applicant}
 Kinder:         {children_applicant}
 Alter:          {age_applicant}
-Sex. Orient.:    {sexual_orientation_applicant}
+Sex. Orient.:   {sexual_orientation_applicant}
 Raucher*in:     {smoking_applicant}
 Anzahl Mitbewohner*in gesucht: {mitwohni}
 
 KONTAKT
 E-Mail:         {email}
-Telefon:        {telephone}
+Telefon:       {telephone}
 
 Einstelldatum:  {date}
 {link}
