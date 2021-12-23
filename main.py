@@ -15,7 +15,8 @@ load_dotenv()  # file with environment variables for secrets
 smtp_server = os.environ['SMTP_SERVER']
 port = int(os.environ['PORT'])
 sender_email = os.environ['SENDER_EMAIL']
-receiver_email = os.environ['RECEIVER_EMAIL'].split(',')
+receiver_email = os.environ['RECEIVER_EMAIL'].split(',') # if several emails are in RECEIVER_EMAIL, separated by a
+# comma, they are split here into a list of strings
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
@@ -51,7 +52,7 @@ def german_to_english(date: str) -> str:
 
 def run_firefox():
     """
-    Function to return headless selenium firefox webdriver.
+    Function to return headless selenium firefox webdriver. Otherwise, GitHub Actions will not run (no screen there).
     :return: selenium firefox webdriver
     """
     options = webdriver.FirefoxOptions()
@@ -177,9 +178,8 @@ def get_wg_info(link: str) -> Tuple[str, str, str, str, str, str, str, str, str,
     district = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]/b[4]').text
 
     wg_ueberblick = driver.find_element(By.XPATH, '//*[@id="content"]/table[1]/tbody/tr[2]/td[1]').text
-    # print("0:", wg_ueberblick)
 
-    address_pattern = re.compile(r'(((\w+\s)*(\w+\.?\s?(\d*)?))\s?\((\S+,\s(\w+)?)\))')
+    address_pattern = re.compile(r'(((\w+\s)*(\w+\.?\s?(\d*\s?\w?)?))\s?\((\S+,\s(\w+)?)\))')
     adress_string = address_pattern.search(wg_ueberblick)  # e.g. "Plesser Straße 7 (2.OG, VH)"
     address = adress_string.group(2)  # might still contain the district
 
