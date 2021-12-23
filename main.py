@@ -19,14 +19,17 @@ receiver_email = os.environ['RECEIVER_EMAIL'].split(',')
 password = os.environ['PASSWORD']  # name of GitHub secret
 
 
-# TODO: docstrings bei Funktionen
 # TODO: poetry
 # TODO: black
 # TODO: write README.md
 
 
 def german_to_english(date: str) -> str:
-    # replace German with English months
+    """
+    Function replaces German with English months.
+    param date: string, German month, e.g. 'März'
+    :return: string, English month, e.g. 'March'
+    """
     if 'Januar' in date:
         date = date.replace('Januar', 'January')
     if 'Februar' in date:
@@ -47,6 +50,10 @@ def german_to_english(date: str) -> str:
 
 
 def run_firefox():
+    """
+    Function to return headless selenium firefox webdriver.
+    :return: selenium firefox webdriver
+    """
     options = webdriver.FirefoxOptions()
     options.headless = True
     driver = webdriver.Firefox(options=options)
@@ -54,15 +61,21 @@ def run_firefox():
 
 
 def get_links_wg_offers() -> list:
-    # options = webdriver.FirefoxOptions()
-    # options.headless = True
-    # driver = webdriver.Firefox(options=options)
+    """
+    Function gets a list of links for wg-ads.
+    Because of legacy code there is no other way than to change the query for the database and click a button. The
+    search query is changed so that the selection is put on 'dauerhaft' (permanent) and is sorted in a way that the
+    last entries are shown first.
+    Then iterate through the whole site, get all the links of wg-offers with XPath and put them in a list which is
+    then returned.
+    One assertion checks for the correct title.
+    :return: list of strings, the strings are hyperlinks of wg-offers
+    """
     driver = run_firefox()
     driver.get('http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100')
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
 
     # Select: select permanent
-    # select_length = Select(driver.find_element_by_name('v'))
     select_length = Select(driver.find_element(By.NAME, 'v'))
     select_length.select_by_value('dauerhaft')
 
@@ -87,7 +100,15 @@ def get_links_wg_offers() -> list:
 
 
 def get_recent_dates(links: list) -> list:
-    # driver = webdriver.Firefox()
+    """
+    Function iterates through the links-list, checks with a RegEx-pattern for each date the link was created (the wg-ad
+    went online), replaces German with English months and appends the date and wg-link as a tuple to a new date_list.
+    This date_list then is iterated to get only those links where the corresponding date is a maximum of 2 days old (
+    only the newest wg-ads ). Those links are stored in a new list recent_entries_link_list which is then returned.
+    One assertion checks for the correct title.
+    param links: list of strings, the strings are hyperlinks
+    :return: list of strings, the strings are hyperlinks, only the most recent ones are in that list
+    """
     driver = run_firefox()
 
     # list of entry-date-objects
@@ -95,7 +116,6 @@ def get_recent_dates(links: list) -> list:
 
     # loop through links in links-list
     for link in links:
-
         # scrape link in links-list
         driver.get(link)
         assert 'WGcompany' in driver.title, '"WGcompany" not in title'
@@ -133,7 +153,13 @@ def get_recent_dates(links: list) -> list:
 def get_wg_info(link: str) -> Tuple[str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str,
                                     str, str, str, str, str, str]:
-
+    """
+    Function receives hyperlink as parameter and gets every value (37 strings) from the specific wg-offer and stores
+    it in a variable. All of those are returned. It uses XPath and in some cases RegEx-patterns to retrieve the values.
+    One assertion checks for the correct title.
+    param link: string, hyperlink to specific wg-offer
+    :return: Tuple with 37 string values
+    """
     driver = run_firefox()
     driver.get(link)
     assert 'WGcompany' in driver.title, '"WGcompany" not in title'
