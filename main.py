@@ -10,6 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from typing import Tuple
+import warnings
 
 
 load_dotenv()  # file with environment variables for secrets
@@ -23,34 +24,13 @@ receiver_email = os.environ["RECEIVER_EMAIL"].split(
 password = os.environ["PASSWORD"]  # name of GitHub secret
 
 
+warnings.filterwarnings(
+    "ignore",
+    message="The localize method is no longer necessary, as this time zone supports the fold attribute",
+)
+
 # TODO: poetry
-# TODO: black
 # TODO: write README.md
-
-
-def german_to_english(date: str) -> str:
-    """
-    Function replaces German with English months.
-    param date: string, German month, e.g. 'März'
-    :return: string, English month, e.g. 'March'
-    """
-    if "Januar" in date:
-        date = date.replace("Januar", "January")
-    if "Februar" in date:
-        date = date.replace("Februar", "February")
-    if "März" in date:
-        date = date.replace("März", "March")
-    if "Mai" in date:
-        date = date.replace("Mai", "May")
-    if "Juni" in date:
-        date = date.replace("Juni", "June")
-    if "Juli" in date:
-        date = date.replace("Juli", "July")
-    if "Oktober" in date:
-        date = date.replace("Oktober", "October")
-    if "Dezember" in date:
-        date = date.replace("Dezember", "December")
-    return date
 
 
 def run_firefox():
@@ -136,19 +116,15 @@ def get_recent_dates(links: list) -> list:
         # apply regex-pattern on html/link
         result = date_pattern.search(wg_site)
         if result:
-            # replace German with English months
-            date = german_to_english(result[1])  # e.g. 9. January 2022
-            print("date", date, type(date))
+            date = dateparser.parse(result[1])  # e.g. 2022-01-06 00:00:00
 
-            # parse date-string and append to date_list
-            date_obj = datetime.strptime(date, "%d. %B %Y")  # e.g. 2022-01-09 00:00:00
-            print("date_obj:", date_obj, type(date_obj))
-
-            # append content in parentheses from string-pattern (= date) and wg-link as tuple
-            date_list.append((date_obj, link))
+            # append date and wg-link as tuple
+            date_list.append((date, link))
 
     # get date 2 days ago
-    date_some_days_ago = datetime.now() + timedelta(days=-2)
+    date_some_days_ago = datetime.now() + timedelta(
+        days=-2
+    )  # e.g. 2022-03-04 00:06:31.723493
 
     # get link list from entries from the past 2 days
     recent_entries_link_list = [i[1] for i in date_list if i[0] > date_some_days_ago]
