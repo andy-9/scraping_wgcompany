@@ -1,3 +1,4 @@
+import dateparser
 import os
 import re
 import smtplib
@@ -136,10 +137,12 @@ def get_recent_dates(links: list) -> list:
         result = date_pattern.search(wg_site)
         if result:
             # replace German with English months
-            date = german_to_english(result[1])
+            date = german_to_english(result[1])  # e.g. 9. January 2022
+            print("date", date, type(date))
 
             # parse date-string and append to date_list
-            date_obj = datetime.strptime(date, "%d. %B %Y")
+            date_obj = datetime.strptime(date, "%d. %B %Y")  # e.g. 2022-01-09 00:00:00
+            print("date_obj:", date_obj, type(date_obj))
 
             # append content in parentheses from string-pattern (= date) and wg-link as tuple
             date_list.append((date_obj, link))
@@ -303,94 +306,94 @@ def get_wg_info(
     # DIE WOHNUNG:
     house_type = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[2]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[2]/td[4]/b",
     ).text.strip()
 
     wg_size = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[3]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[3]/td[4]/b",
     ).text.strip()
 
     amount_of_rooms = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[" "4]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[4]/td[4]/b",
     ).text.strip()
 
     animals_allowed = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[" "5]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[5]/td[4]/b",
     ).text.strip()
 
     tv = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[6]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[6]/td[4]/b",
     ).text.strip()
 
     smoking_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[7]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[7]/td[4]/b",
     ).text.strip()
 
     # WIR SIND:
     gender_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[10]/td[" "2]",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[10]/td[2]",
     ).text.strip()
 
     children_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[11]/td[" "2]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[11]/td[2]/b",
     ).text.strip()
 
     age_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[12]/td[" "2]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[12]/td[2]/b",
     ).text.strip()
 
     sexual_orientation_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[" "2]/tbody/tr[13]/td[2]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[13]/td[2]/b",
     ).text.strip()
 
     nutrition_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[14]/td[" "2]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[14]/td[2]/b",
     ).text.strip()
 
     art_wg = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td[" "2]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td[2]/b",
     ).text.strip()
 
     #  WIR SUCHEN
     gender_applicant = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[" "10]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[10]/td[4]/b",
     ).text.strip()
 
     children_applicant = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[" "11]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[11]/td[4]/b",
     ).text.strip()
 
     age_applicant = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[12]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[12]/td[4]/b",
     ).text.strip()
 
     sexual_orientation_applicant = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[" "2]/tbody/tr[13]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[13]/td[4]/b",
     ).text.strip()
 
     smoking_applicant = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[" "2]/tbody/tr[14]/td[4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[14]/td[4]/b",
     ).text.strip()
 
     mitwohni = driver.find_element(
         By.XPATH,
-        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td[" "4]/b",
+        "/html/body/table/tbody/tr[1]/td[2]/div[2]/table[2]/tbody/tr[15]/td[4]/b",
     ).text.strip()
 
     # Close browser
