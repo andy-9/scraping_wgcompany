@@ -1,4 +1,5 @@
 import dateparser
+import isort
 import os
 import re
 import smtplib
@@ -13,13 +14,14 @@ from typing import Tuple
 import warnings
 
 
+isort.file("main.py")
+
+
 load_dotenv()  # file with environment variables for secrets
 smtp_server = os.environ["SMTP_SERVER"]
 port = int(os.environ["PORT"])
 sender_email = os.environ["SENDER_EMAIL"]
-receiver_email = os.environ["RECEIVER_EMAIL"].split(
-    ","
-)  # if several emails are in RECEIVER_EMAIL, separated by a
+receiver_email = os.environ["RECEIVER_EMAIL"].split(",")  # if several emails are in RECEIVER_EMAIL, separated by a
 # comma, they are split here into a list of strings
 password = os.environ["PASSWORD"]  # name of GitHub secret
 
@@ -30,8 +32,6 @@ warnings.filterwarnings(
 )
 
 # TODO: poetry
-# TODO: write README.md
-
 
 def run_firefox():
     """
