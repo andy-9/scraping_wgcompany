@@ -1,7 +1,7 @@
 # About scraping_wgcompany
-[General info](#general-info)
-[Technologies](#technologies)
-[License](#license)
+[General info](#general-info)  
+[Technologies](#technologies)  
+[License](#license)  
 
 
 ## General info
