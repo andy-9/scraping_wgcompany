@@ -1,24 +1,18 @@
 # About scraping_wgcompany
-
-[toc]
-
+[General info](#general-info)
+[Technologies](#technologies)
+[License](#license)
 
 
 ## General info
 **scraping_wgcompany** scrapes the newest WG-entries on wgcompany.de and emails them to a given email address.
 
-
 <img src="grail_upload.gif" alt="gif to display some images from scraping_wgcompany">
 
 
-
 ## Technologies
-
 The code is written in Python 3.8.10
-
 Additional libraries installed and used are dateparser, python-dotenv, and selenium.
-
-
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
