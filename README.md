@@ -5,7 +5,7 @@
 
 
 ## General info
-**scraping_wgcompany** scrapes the newest WG-entries on wgcompany.de and emails them to a given email address.
+**scraping_wgcompany** scrapes the newest WG-entries on [wgcompany.de](http://www.wgcompany.de/) and emails them to a given email address.
 
 <img src="grail_upload.gif" alt="gif to display some images from scraping_wgcompany">
 
