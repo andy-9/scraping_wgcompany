@@ -1,21 +1,21 @@
-import dateparser
-import isort
 import os
 import re
 import smtplib
 import ssl
-
+import warnings
 from datetime import datetime, timedelta
+from typing import Tuple
+
+import dateparser
+import isort
+from chromedriver_py import binary_path
 from dotenv import load_dotenv
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-from typing import Tuple
-import warnings
-
 
 isort.file("main.py")
-
 
 load_dotenv()  # file with environment variables for secrets
 smtp_server = os.environ["SMTP_SERVER"]
@@ -25,22 +25,24 @@ receiver_email = os.environ["RECEIVER_EMAIL"].split(",")  # if several emails ar
 # comma, they are split here into a list of strings
 password = os.environ["PASSWORD"]  # name of GitHub secret
 
-
 warnings.filterwarnings(
     "ignore",
     message="The localize method is no longer necessary, as this time zone supports the fold attribute",
 )
 
+
 # TODO: poetry
 
-def run_firefox():
+
+def run_chrome():
     """
-    Function to return headless selenium firefox webdriver. Otherwise, GitHub Actions will not run (no screen there).
-    :return: selenium firefox webdriver
+    Function to return headless selenium chrome webdriver. Otherwise, GitHub Actions will not run (no screen there).
+    :return: selenium chrome webdriver
     """
-    options = webdriver.FirefoxOptions()
+    options = webdriver.ChromeOptions()
     options.headless = True
-    driver = webdriver.Firefox(options=options)
+    service_object = Service(binary_path)
+    driver = webdriver.Chrome(service=service_object, options=options)
     return driver
 
 
@@ -55,7 +57,7 @@ def get_links_wg_offers() -> list:
     One assertion checks for the correct title.
     :return: list of strings, the strings are hyperlinks of wg-offers
     """
-    driver = run_firefox()
+    driver = run_chrome()
     driver.get("http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100")
     assert "WGcompany" in driver.title, '"WGcompany" not in title'
 
@@ -96,7 +98,7 @@ def get_recent_dates(links: list) -> list:
     param links: list of strings, the strings are hyperlinks
     :return: list of strings, the strings are hyperlinks, only the most recent ones are in that list
     """
-    driver = run_firefox()
+    driver = run_chrome()
 
     # list of entry-date-objects
     date_list = []
@@ -136,7 +138,7 @@ def get_recent_dates(links: list) -> list:
 
 
 def get_wg_info(
-    link: str,
+        link: str,
 ) -> Tuple[
     str,
     str,
@@ -184,7 +186,7 @@ def get_wg_info(
     param link: string, hyperlink to specific wg-offer
     :return: Tuple with 37 string values
     """
-    driver = run_firefox()
+    driver = run_chrome()
     driver.get(link)
     assert "WGcompany" in driver.title, '"WGcompany" not in title'
 
@@ -418,44 +420,44 @@ def get_wg_info(
 
 
 def send_mail(
-    date: str,
-    room: str,
-    square_meters: str,
-    size_of_wg: str,
-    district: str,
-    address: str,
-    geschoss: str,
-    available_from: str,
-    price: str,
-    nebenkosten: str,
-    email: str,
-    telephone: str,
-    ad_text: str,
-    how_long: str,
-    furnished: str,
-    balcony: str,
-    floor: str,
-    heating: str,
-    abstand: str,
-    house_type: str,
-    wg_size: str,
-    amount_of_rooms: str,
-    animals_allowed: str,
-    tv: str,
-    smoking_wg: str,
-    gender_wg: str,
-    children_wg: str,
-    age_wg: str,
-    sexual_orientation_wg: str,
-    nutrition_wg: str,
-    art_wg: str,
-    gender_applicant: str,
-    children_applicant: str,
-    age_applicant: str,
-    sexual_orientation_applicant: str,
-    smoking_applicant: str,
-    mitwohni: str,
-    link: str,
+        date: str,
+        room: str,
+        square_meters: str,
+        size_of_wg: str,
+        district: str,
+        address: str,
+        geschoss: str,
+        available_from: str,
+        price: str,
+        nebenkosten: str,
+        email: str,
+        telephone: str,
+        ad_text: str,
+        how_long: str,
+        furnished: str,
+        balcony: str,
+        floor: str,
+        heating: str,
+        abstand: str,
+        house_type: str,
+        wg_size: str,
+        amount_of_rooms: str,
+        animals_allowed: str,
+        tv: str,
+        smoking_wg: str,
+        gender_wg: str,
+        children_wg: str,
+        age_wg: str,
+        sexual_orientation_wg: str,
+        nutrition_wg: str,
+        art_wg: str,
+        gender_applicant: str,
+        children_applicant: str,
+        age_applicant: str,
+        sexual_orientation_applicant: str,
+        smoking_applicant: str,
+        mitwohni: str,
+        link: str,
 ):
     """
     Function to send an email with all relevant info (in variables) in the message-body.
