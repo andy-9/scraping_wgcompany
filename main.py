@@ -31,9 +31,6 @@ warnings.filterwarnings(
 )
 
 
-# TODO: poetry
-
-
 def run_chrome():
     """
     Function to return headless selenium chrome webdriver. Otherwise, GitHub Actions will not run (no screen there).

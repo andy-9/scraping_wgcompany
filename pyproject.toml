@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "scraping_wgcompany"
+version = "0.1.0"
+description = "scraping_wgcompany scrapes the newest WG-entries on wgcompany.de and emails them to a given email address."
+authors = ["Andreas Hechler <info@andreashechler.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+chromedriver-py = "^106.0.5249"
+dateparser = "^1.1.1"
+dotenv = "^0.0.5"
+isort = "^5.10.1"
+poetry = "^1.2.1"
+python = "^3.10"
+selenium = "^4.5.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
