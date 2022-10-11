@@ -1,15 +1,16 @@
-import os
 import re
 import smtplib
 import ssl
 import warnings
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Tuple
 
+import chromedriver_autoinstaller
 import dateparser
 import isort
 from chromedriver_py import binary_path
-from dotenv import load_dotenv
+from dotenv import get_variables
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -17,13 +18,15 @@ from selenium.webdriver.support.ui import Select
 
 isort.file("main.py")
 
-load_dotenv()  # file with environment variables for secrets
-smtp_server = os.environ["SMTP_SERVER"]
-port = int(os.environ["PORT"])
-sender_email = os.environ["SENDER_EMAIL"]
-receiver_email = os.environ["RECEIVER_EMAIL"].split(",")  # if several emails are in RECEIVER_EMAIL, separated by a
-# comma, they are split here into a list of strings
-password = os.environ["PASSWORD"]  # name of GitHub secret
+env_path = Path(".")/".env"
+ENVIRONMENT_VARIABLES = get_variables(env_path)
+SMTP_SERVER = ENVIRONMENT_VARIABLES.get('SMTP_SERVER')
+PORT = ENVIRONMENT_VARIABLES.get('PORT')
+SENDER_EMAIL = ENVIRONMENT_VARIABLES.get('SENDER_EMAIL')
+RECEIVER_EMAIL = ENVIRONMENT_VARIABLES.get('RECEIVER_EMAIL').split(",")  # if several emails are in RECEIVER_EMAIL,
+# separated by a comma, they are split here into a list of strings
+PASSWORD = ENVIRONMENT_VARIABLES.get('PASSWORD')
+
 
 warnings.filterwarnings(
     "ignore",
@@ -40,6 +43,10 @@ def run_chrome():
     options.headless = True
     service_object = Service(binary_path)
     driver = webdriver.Chrome(service=service_object, options=options)
+
+    if driver.capabilities['browserVersion'] != '106.0.5249.103':
+        chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+        # and if it doesn't exist, download it automatically, then add chromedriver to path
     return driver
 
 
@@ -562,9 +569,9 @@ Einstelldatum:  {date}
     # Create a secure SSL context
     context = ssl.create_default_context()
 
-    with smtplib.SMTP_SSL(host=smtp_server, port=port, context=context) as server:
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message)
+    with smtplib.SMTP_SSL(host=SMTP_SERVER, port=PORT, context=context) as server:
+        server.login(SENDER_EMAIL, PASSWORD)
+        server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message)
 
 
 def main():

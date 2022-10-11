@@ -8,7 +8,6 @@ license = "MIT"
 [tool.poetry.dependencies]
 chromedriver-py = "^106.0.5249"
 dateparser = "^1.1.1"
-dotenv = "^0.0.5"
 isort = "^5.10.1"
 poetry = "^1.2.1"
 python = "^3.10"
