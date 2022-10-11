@@ -81,6 +81,14 @@ python-versions = ">=3.6.0"
 unicode-backport = ["unicodedata2"]
 
 [[package]]
+name = "chromedriver-autoinstaller"
+version = "0.4.0"
+description = "Automatically install chromedriver that supports the currently installed version of chrome."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "chromedriver-py"
 version = "106.0.5249.61"
 description = "chromedriver binaries for all platforms"
@@ -150,6 +158,14 @@ langdetect = ["langdetect"]
 name = "distlib"
 version = "0.3.6"
 description = "Distribution utilities"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "dotenv"
+version = "0.0.5"
+description = "Handle .env files"
 category = "main"
 optional = false
 python-versions = "*"
@@ -747,7 +763,7 @@ cffi = ">=1.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3a6fe1cd67455ed4341d69ad02066340339196944f172c8386e35f69167217d7"
+content-hash = "a0e6737a9008307dc52ea763742ce878172e23f8920e8a3eb6b77b0eb7e6bc95"
 
 [metadata.files]
 async-generator = [
@@ -840,6 +856,10 @@ charset-normalizer = [
     {file = "charset-normalizer-2.1.1.tar.gz", hash = "sha256:5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"},
     {file = "charset_normalizer-2.1.1-py3-none-any.whl", hash = "sha256:83e9a75d1911279afd89352c68b45348559d1fc0506b054b346651b5e7fee29f"},
 ]
+chromedriver-autoinstaller = [
+    {file = "chromedriver-autoinstaller-0.4.0.tar.gz", hash = "sha256:57f15f40d2e356c4cb84870cb7f882283a8280118bedacbf19301dd692f672b5"},
+    {file = "chromedriver_autoinstaller-0.4.0-py3-none-any.whl", hash = "sha256:1534d39903d22379ff13435d695703ae9b14ddb336d43556fd7735854ada6d2b"},
+]
 chromedriver-py = [
     {file = "chromedriver-py-106.0.5249.61.tar.gz", hash = "sha256:727e69905be66170f1ebc416b1963d88a7888985e55799286e1d348c03aa84b9"},
     {file = "chromedriver_py-106.0.5249.61-py3-none-any.whl", hash = "sha256:fb6a7b8ae067ee4808cf654b461e4ae5289b2667479af523f8f1473b48626f9e"},
@@ -887,6 +907,9 @@ dateparser = [
 distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},
     {file = "distlib-0.3.6.tar.gz", hash = "sha256:14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46"},
+]
+dotenv = [
+    {file = "dotenv-0.0.5.tar.gz", hash = "sha256:b58d2ab3f83dbd4f8a362b21158a606bee87317a9444485566b3c8f0af847091"},
 ]
 dulwich = [
     {file = "dulwich-0.20.46-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:6676196e9cf377cde62aa2f5d741e93207437343e0c62368bd0d784c322a3c49"},
