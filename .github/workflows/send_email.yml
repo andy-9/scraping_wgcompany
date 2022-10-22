@@ -50,7 +50,7 @@ jobs:
 #          sudo dpkg -i 'google-chrome-stable_${VERSION_STRING}_amd64.deb'
 
       - name: Chrome version  # check if chrome is installed
-        run: chrome --version
+        run: google-chrome-stable --version
 
 #      - name: Setup env with environment variables
 #        env:  # setup env
