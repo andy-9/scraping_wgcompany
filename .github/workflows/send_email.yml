@@ -1,4 +1,4 @@
-name: send daily email
+name: Send daily email
 
 on:
   workflow_dispatch:  # be able to run manually on GitHub
@@ -22,7 +22,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
 
       - name: Set up Python
         uses: actions/setup-python@v4  # sets up a python environment
