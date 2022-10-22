@@ -1,4 +1,4 @@
-name: send daily email
+name: Send daily email
 
 on:
   workflow_dispatch:  # be able to run manually on GitHub
@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest  # most current os
+
+#    runs:
+#      using: 'node18'
 
     env:  # setup env
       SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -19,13 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3  # check out repo so a workflow can access it
 
-      - name: Set up node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-#      - name: Install dependencies
-#        run: npm ci
+      - run: npm ci
+      - run: npm test
 
       - name: Set up Python
         uses: actions/setup-python@v4  # sets up a python environment
