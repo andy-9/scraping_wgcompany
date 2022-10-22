@@ -60,7 +60,7 @@ jobs:
 
       - name: Install dependencies and run main.py
         run: |
+          poetry install
 #          python -m poetry install
 #          python main.py
-          poetry install
 #          poetry run python main.py
