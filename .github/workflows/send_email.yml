@@ -28,21 +28,21 @@ jobs:
 #      - name: Poetry version  # check poetry version
 #        run: poetry --version
 
-      - name: Prepare Chrome
-        uses: browser-actions/setup-chrome
-        with:
-          chrome-version: '106.0.5249'  # install specific version of chrome
+#      - name: Prepare Chrome
+#        uses: browser-actions/setup-chrome
+#        with:
+#          chrome-version: '106.0.5249'  # install specific version of chrome
 
-      - name: Chrome version  # check if chrome is installed
-        run: chrome --version
+#      - name: Chrome version  # check if chrome is installed
+#        run: chrome --version
 
-      - name: Install dependencies and send email
-        env:  # setup env
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          PORT: ${{ secrets.PORT }}
-          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
+#      - name: Install dependencies and send email
+#        env:  # setup env
+#          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+#          PORT: ${{ secrets.PORT }}
+#          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+#          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+#          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
 
 #      - name: Install dependencies and run main.py
 #        run: |
