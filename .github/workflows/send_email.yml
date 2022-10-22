@@ -44,9 +44,8 @@ jobs:
 
       - name: Setup Chrome 106
         run: |
-          VERSION_STRING='106.0.5249.103'
-          wget 'https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION_STRING}-1_amd64.deb'
-          sudo dpkg -i 'google-chrome-stable_${VERSION_STRING}-1_amd64.deb'
+          wget 'https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_106.0.5249.103-1_amd64.deb'
+          sudo dpkg -i 'google-chrome-stable_106.0.5249.103-1_amd64.deb'
 
       - name: Chrome version  # check if chrome is installed
         run: google-chrome-stable --version
@@ -59,9 +58,9 @@ jobs:
 #          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
 #          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
 
-#      - name: Install dependencies and run main.py
-#        run: |
-#          python -m poetry install
-#          python main.py
+      - name: Install dependencies and run main.py
+        run: |
+          python -m poetry install
+          python main.py
 #          poetry install
 #          poetry run python main.py
