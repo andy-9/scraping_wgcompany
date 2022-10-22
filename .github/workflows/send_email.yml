@@ -35,7 +35,7 @@ jobs:
       - name: Prepare Chrome
         uses: browser-actions/setup-chrome@latest
         with:
-          chrome-version: '106.0.5249.103'  # install specific version of chrome
+#          chrome-version: '106.0.5249.103'  # install specific version of chrome
 
       - name: Chrome version  # check if chrome is installed
         run: chrome --version
