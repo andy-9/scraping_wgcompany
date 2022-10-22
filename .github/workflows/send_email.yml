@@ -25,7 +25,6 @@ jobs:
 #          virtualenvs-in-project: false
 #          virtualenvs-path: {cache-dir}/venv
 #          installer-parallel: true
-        run: poetry --version
 
       - name: Prepare Chrome
         uses: browser-actions/setup-chrome
@@ -46,4 +45,5 @@ jobs:
       - name: Install dependencies and run main.py
         run: |
           python -m poetry install
+          poetry --version
           python main.py
