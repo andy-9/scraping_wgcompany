@@ -14,11 +14,23 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2  # sets up a python environment
         with:
-          python-version: '3.8'
-      - name: Prepare Firefox
-        uses: browser-actions/setup-firefox@latest  # install firefox
-      - name: Firefox version  # check if firefox is installed
-        run: firefox --version
+          python-version: '3.10'
+
+      - name: Install and configure Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.2.1
+          virtualenvs-create: true
+          virtualenvs-in-project: false
+          virtualenvs-path: {cache-dir}/virtualenvs
+          installer-parallel: true
+        run: poetry --version
+      - name: Prepare Chrome
+        uses: browser-actions/setup-chrome
+        with:
+          chrome-version: '106.0.5249'  # install specific version of chrome
+      - name: Chrome version  # check if chrome is installed
+        run: chrome --version
       - name: Install dependencies and send email
         env:  # setup env
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -26,6 +38,7 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
-        run: |  # install dependencies and run main.py
-          pip install -r requirements.txt
+      - name: Install dependencies and run main.py
+        run: |
+          python -m poetry install
           python main.py
