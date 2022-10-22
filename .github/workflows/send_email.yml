@@ -19,6 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3  # check out repo so a workflow can access it
 
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+        run: npm ci
+
       - name: Set up Python
         uses: actions/setup-python@v4  # sets up a python environment
         with:
