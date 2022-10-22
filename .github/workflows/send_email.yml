@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest  # most current os
 
     steps:
-      - uses: actions/checkout@v2  # check out repo so a workflow can access it
+      - uses: actions/checkout@v3  # check out repo so a workflow can access it
 
       - name: Set up Python
-        uses: actions/setup-python@v2  # sets up a python environment
+        uses: actions/setup-python@v4  # sets up a python environment
         with:
           python-version: '3.10'
 
