@@ -19,14 +19,14 @@ jobs:
 
 #      - name: Install and configure Poetry
 #        uses: snok/install-poetry@v1
-      
-      - name: Install poetry
-        uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: '1.2.1'
 
-      - name: Poetry version  # check poetry version
-        run: poetry --version
+#      - name: Install poetry
+#        uses: abatilo/actions-poetry@v2
+#        with:
+#          poetry-version: '1.2.1'
+
+#      - name: Poetry version  # check poetry version
+#        run: poetry --version
 
       - name: Prepare Chrome
         uses: browser-actions/setup-chrome
@@ -46,5 +46,5 @@ jobs:
 
       - name: Install dependencies and run main.py
         run: |
-          python -m poetry install
+#          python -m poetry install
           python main.py
