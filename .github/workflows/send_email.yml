@@ -26,10 +26,9 @@ jobs:
 #        uses: abatilo/actions-poetry@v2
 #        with:
 #          poetry-version: '1.2.1'
-      test
 
-#      - name: Poetry version  # check poetry version
-#        run: poetry --version
+      - name: Poetry version  # check poetry version
+        run: poetry --version
 
 #      - name: Prepare Chrome
 #        uses: browser-actions/setup-chrome
