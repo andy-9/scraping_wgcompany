@@ -53,7 +53,7 @@ jobs:
 #          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
 #          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
 
-#      - name: Install dependencies and run main.py
-#        run: |
-#          python -m poetry install
-#          python main.py
+      - name: Install dependencies and run main.py
+        run: |
+          python -m poetry install
+          python main.py
