@@ -37,7 +37,7 @@ jobs:
         run: poetry --version
 
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@latest
+        uses: browser-actions/setup-chrome
         with:
           chrome-version: 106.0.5249.103  # install specific version of chrome
 
