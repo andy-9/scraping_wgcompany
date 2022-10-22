@@ -21,8 +21,8 @@ The idea was to build an app that emails once a day new WG-entries to a given em
 ## Technologies
 The code is written in Python 3.10.  
 
-It was tested on ubuntu 22 and Chrome version 106.0.5249. If a newer version of Chrome is used, 
-chromedriver_autoinstaller automatically downloads the latest chromedriver - it is important that the versions of 
+It was tested on ubuntu 22 and Chrome version 106.0.5249.103.  
+If a newer version of Chrome is used, chromedriver_autoinstaller automatically downloads the latest chromedriver - it is important that the versions of 
 Chrome and the chromedriver match.  
 
 Additional libraries installed and used are:  
@@ -48,9 +48,9 @@ permanent, show last entries first).
 * Run `poetry install` to install the defined dependencies for the project. 
 
 ### Local installation
-* Create an .env-file on root level. Set environment variables for `SMTP_SERVER` (e.g. SMTP_SERVER=mail.gandi.net), 
-  `PORT` (e.g. PORT=465), `SENDER_EMAIL` (e.g. SENDER_EMAIL=info@andreashechler.com), `RECEIVER_EMAIL` (e.g. 
-  SENDER_EMAIL=info@andreashechler.com), and `PASSWORD` (e.g. PASSWORD='your_password').
+* Create an .env-file on root level. Set environment variables for `SMTP_SERVER` (e.g. SMTP_SERVER=smtp.gmail.com), 
+  `PORT` (e.g. PORT=465), `SENDER_EMAIL` (e.g. SENDER_EMAIL=info@test.com), `RECEIVER_EMAIL` (e.g. 
+  SENDER_EMAIL=info@test.com), and `PASSWORD` (e.g. PASSWORD='your_password').
 * Create a .gitignore-file and add `*.env`
 * Run the app with `poetry run python main.py`.
 

@@ -1,4 +1,4 @@
-name: Send daily email
+name: send daily email
 
 on:
   workflow_dispatch:  # be able to run manually on GitHub
