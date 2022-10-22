@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest  # most current os
 
-#    runs:
-#      using: 'node18'
-
     env:  # setup env
       SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
       PORT: ${{ secrets.PORT }}
@@ -25,8 +22,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-#      - run: npm ci
-#      - run: npm test
 
       - name: Set up Python
         uses: actions/setup-python@v4  # sets up a python environment
@@ -59,5 +54,7 @@ jobs:
 
       - name: Install dependencies and run main.py
         run: |
-          python -m poetry install
-          python main.py
+#          python -m poetry install
+#          python main.py
+#          poetry install
+          poetry run python main.py
