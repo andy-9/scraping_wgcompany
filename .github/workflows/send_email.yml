@@ -19,12 +19,6 @@ jobs:
 
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
-        with:
-          version: 1.2.1
-#          virtualenvs-create: true
-#          virtualenvs-in-project: false
-#          virtualenvs-path: {cache-dir}/venv
-#          installer-parallel: true
 
       - name: Prepare Chrome
         uses: browser-actions/setup-chrome
