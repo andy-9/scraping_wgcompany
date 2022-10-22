@@ -38,13 +38,13 @@ jobs:
       - name: Chrome version  # check if chrome is installed
         run: chrome --version
 
-#      - name: Install dependencies and send email
-#        env:  # setup env
-#          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-#          PORT: ${{ secrets.PORT }}
-#          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-#          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-#          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
+      - name: Install dependencies and send email
+        env:  # setup env
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          PORT: ${{ secrets.PORT }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
 
 #      - name: Install dependencies and run main.py
 #        run: |
