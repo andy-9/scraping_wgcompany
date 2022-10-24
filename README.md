@@ -6,6 +6,9 @@
 [License](#license)  
 
 
+[toc]
+
+
 ## General info
 **scraping_wgcompany** scrapes the newest WG-entries on <a href="http://www.wgcompany.de/" target="_blank" 
 rel="noopener noreferrer">wgcompany</a> and emails them to a given email address.
@@ -51,13 +54,13 @@ noreferrer">wgcompany</a>) and set a few parameters (looking for permanent, show
 * Create an .env-file on root level. Set environment variables for `SMTP_SERVER` (e.g. SMTP_SERVER=smtp.gmail.com), 
   `PORT` (e.g. PORT=465), `SENDER_EMAIL` (e.g. SENDER_EMAIL=info@test.com), `RECEIVER_EMAIL` (e.g. 
   SENDER_EMAIL=info@test.com), and `PASSWORD` (e.g. PASSWORD='your_password').
-* Create a .gitignore-file and add `*.env`
+* Create a .gitignore-file and add `*.env` in it.
 * Run the app with `poetry run python main.py`.
 
 ### Automate with GitHub Actions
 * In your repository go to `Settings` --> `Secrets` --> `Actions`
 * Set repository secrets for `SMTP_SERVER`, `PORT`, `SENDER_EMAIL`, `RECEIVER_EMAIL`, and `PASSWORD` (examples see 
-  above in Local installation).
+  above in [Local installation](#local-installation)).
 
 
 ## License
