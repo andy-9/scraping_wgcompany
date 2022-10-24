@@ -23,8 +23,8 @@ The idea was to build an app that emails once a day new WG-entries to a given em
 The code is written in Python 3.10.  
 
 It was tested on ubuntu 22 and Chrome version 106.0.5249.103.  
-If a newer version of Chrome is used, chromedriver_autoinstaller automatically downloads the latest chromedriver - it is important that the versions of 
-Chrome and the chromedriver match.  
+If a newer version of Chrome is used, chromedriver_autoinstaller automatically downloads the latest chromedriver - 
+it is important that the versions of Chrome and the chromedriver match.  
 
 Additional libraries installed and used are:  
 * chromedriver-autoinstaller = "^0.4.0"
@@ -36,10 +36,9 @@ Additional libraries installed and used are:
 * selenium = "^4.5.0"
 
 Simple webscraping is not possible because the database cannot be accessed by hyperlink.  
-Thus the the app makes use of the selenium library to call the site
+Thus the app makes use of the selenium library to access the site
 (<a href="http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100" target="_blank" rel="noopener 
-noreferrer">wgcompany</a>) and set a few parameters (looking for 
-permanent, show last entries first).
+noreferrer">wgcompany</a>) and set a few parameters (looking for permanent, show last entries first).
 
 
 ## Installation
