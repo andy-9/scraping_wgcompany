@@ -1,7 +1,8 @@
 # About scraping_wgcompany
 [General info](#general-info)  
+[Background](#background)  
 [Technologies](#technologies)  
-[Background](#background)
+[Installation](#installation)  
 [License](#license)  
 
 
@@ -58,8 +59,6 @@ permanent, show last entries first).
 * In your repository go to `Settings` --> `Secrets` --> `Actions`
 * Set repository secrets for `SMTP_SERVER`, `PORT`, `SENDER_EMAIL`, `RECEIVER_EMAIL`, and `PASSWORD` (examples see 
   above in Local installation).
-
-
 
 
 ## License
