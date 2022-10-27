@@ -28,6 +28,7 @@ RECEIVER_EMAIL = ENVIRONMENT_VARIABLES.get('RECEIVER_EMAIL').split(",")  # if se
 PASSWORD = ENVIRONMENT_VARIABLES.get('PASSWORD')
 
 
+# ignore dateparser warnings regarding pytz
 warnings.filterwarnings(
     "ignore",
     message="The localize method is no longer necessary, as this time zone supports the fold attribute",
@@ -467,7 +468,7 @@ def send_mail(
     Function to send an email with all relevant info (in variables) in the message-body.
     Email is send through SSL-connection.
     smtp_server, port, sender_email, password and receiver_email are global variables in .env-file (locally) and in
-    GitHub secrets remote for GitHub actions.
+    GitHub secrets (remote) for GitHub actions.
     :param date: string, date the ad went online
     :param room: string, amount of rooms
     :param square_meters: string, size of room in square meters
