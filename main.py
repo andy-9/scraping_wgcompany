@@ -1,3 +1,4 @@
+import os
 import re
 import smtplib
 import ssl
@@ -10,7 +11,8 @@ import chromedriver_autoinstaller
 import dateparser
 import isort
 from chromedriver_py import binary_path
-from dotenv import get_variables
+# from dotenv import get_variables
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -18,15 +20,13 @@ from selenium.webdriver.support.ui import Select
 
 isort.file("main.py")
 
-env_path = Path(".")/".env"
-ENVIRONMENT_VARIABLES = get_variables(env_path)
-SMTP_SERVER = ENVIRONMENT_VARIABLES.get('SMTP_SERVER')
-PORT = ENVIRONMENT_VARIABLES.get('PORT')
-SENDER_EMAIL = ENVIRONMENT_VARIABLES.get('SENDER_EMAIL')
-RECEIVER_EMAIL = ENVIRONMENT_VARIABLES.get('RECEIVER_EMAIL').split(",")  # if several emails are in RECEIVER_EMAIL,
+load_dotenv()
+SMTP_SERVER = os.environ['SMTP_SERVER']
+PORT = os.environ['PORT']
+SENDER_EMAIL = os.environ['SENDER_EMAIL']
+RECEIVER_EMAIL = os.environ['RECEIVER_EMAIL'].split(",")  # if several emails are in RECEIVER_EMAIL,
 # separated by a comma, they are split here into a list of strings
-PASSWORD = ENVIRONMENT_VARIABLES.get('PASSWORD')
-
+PASSWORD = os.environ['PASSWORD']
 
 # ignore dateparser warnings regarding pytz
 warnings.filterwarnings(
