@@ -30,9 +30,8 @@ Additional libraries installed and used are:
 * chromedriver-autoinstaller = "^0.4.0"
 * chromedriver-py = "^106.0.5249"
 * dateparser = "^1.1.1"
-* dotenv = "^0.0.5"
-* isort = "^5.10.1"
 * poetry = "^1.2.1"
+* python-dotenv = "^0.21.0"
 * selenium = "^4.5.0"
 
 Simple webscraping is not possible because the database cannot be accessed by hyperlink.  

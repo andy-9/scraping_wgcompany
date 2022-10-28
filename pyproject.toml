@@ -9,7 +9,6 @@ license = "MIT"
 chromedriver-autoinstaller = "^0.4.0"
 chromedriver-py = "^106.0.5249"
 dateparser = "^1.1.1"
-# TODO: python-dotenv + License.md erstellen (add file --> license --> choose)
 python = "^3.10"
 python-dotenv = "^0.21.0"
 selenium = "^4.5.0"

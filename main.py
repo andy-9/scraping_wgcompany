@@ -4,14 +4,12 @@ import smtplib
 import ssl
 import warnings
 from datetime import datetime, timedelta
-from pathlib import Path
 from typing import Tuple
 
 import chromedriver_autoinstaller
 import dateparser
 import isort
 from chromedriver_py import binary_path
-# from dotenv import get_variables
 from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service

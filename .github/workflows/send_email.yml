@@ -40,12 +40,6 @@ jobs:
       - name: Poetry version  # check poetry version
         run: poetry --version
 
-#       DOES NOT WORK
-#      - name: Setup Chrome
-#        uses: browser-actions/setup-chrome@latest
-#        with:
-#          chrome-version: 106.0.5249.103  # install specific version of chrome
-
       - name: Setup Chrome 106
         run: |
           wget 'https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_106.0.5249.103-1_amd64.deb'
@@ -57,6 +51,3 @@ jobs:
       - name: Install dependencies and run main.py
         run: |
           poetry install && poetry run python main.py
-#          python -m poetry install
-#          python main.py
-#          poetry run python main.py
