@@ -1,6 +1,10 @@
 name: Send daily email
 
 on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:  # be able to run manually on GitHub
   schedule:
     - cron: "0 0 * * *"  # run every midnight
