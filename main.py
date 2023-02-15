@@ -20,11 +20,12 @@ isort.file("main.py")
 
 load_dotenv()
 SMTP_SERVER = os.environ['SMTP_SERVER']
-PORT = os.environ['PORT']
+PORT = int(os.environ['PORT'])
 SENDER_EMAIL = os.environ['SENDER_EMAIL']
 RECEIVER_EMAIL = os.environ['RECEIVER_EMAIL'].split(",")  # if several emails are in RECEIVER_EMAIL,
 # separated by a comma, they are split here into a list of strings
 PASSWORD = os.environ['PASSWORD']
+
 
 # ignore dateparser warnings regarding pytz
 warnings.filterwarnings(
