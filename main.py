@@ -40,8 +40,11 @@ def run_chrome():
     """
     options = webdriver.ChromeOptions()
     options.headless = True
-    service_object = Service(binary_path)
+    service_object = Service(binary_path)  # binary_path: downloads and installs the latest chromedriver binary version
     driver = webdriver.Chrome(service=service_object, options=options)
+
+    # in case of chrome and chromedriver mismatch: install specific version of chromedriver
+    # see more here: https://pypi.org/project/chromedriver-py/#history
 
     if driver.capabilities['browserVersion'] != '106.0.5249.103':
         chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
