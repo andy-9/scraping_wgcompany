@@ -6,19 +6,19 @@ import warnings
 from datetime import datetime, timedelta
 from typing import Tuple
 
-import chromedriver_autoinstaller
 import dateparser
 import isort
-from chromedriver_py import binary_path
-from dotenv import load_dotenv
+from dotenv import main
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from webdriver_manager.chrome import ChromeDriverManager
 
 isort.file("main.py")
 
-load_dotenv()
+main.load_dotenv()
 SMTP_SERVER = os.environ['SMTP_SERVER']
 PORT = int(os.environ['PORT'])
 SENDER_EMAIL = os.environ['SENDER_EMAIL']
@@ -39,17 +39,10 @@ def run_chrome():
     Function to return headless selenium chrome webdriver. Otherwise, GitHub Actions will not run (no screen there).
     :return: selenium chrome webdriver
     """
-    options = webdriver.ChromeOptions()
-    options.headless = True
-    service_object = Service(binary_path)  # binary_path: downloads and installs the latest chromedriver binary version
-    driver = webdriver.Chrome(service=service_object, options=options)
-
-    # in case of chrome and chromedriver mismatch: install specific version of chromedriver
-    # see more here: https://pypi.org/project/chromedriver-py/#history
-
-    if driver.capabilities['browserVersion'] != '106.0.5249.103':
-        chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
-        # and if it doesn't exist, download it automatically, then add chromedriver to path
+    options = Options()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),
+                              options=options)
     return driver
 
 

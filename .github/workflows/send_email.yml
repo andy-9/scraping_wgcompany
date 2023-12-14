@@ -30,23 +30,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4  # sets up a python environment
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
         with:
           version: 1.2.1
-
-      - name: Poetry version  # check poetry version
         run: poetry --version
 
-      - name: Setup Chrome 106
+      - name: Setup Chrome
+        Uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
         run: |
-          wget 'https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_106.0.5249.103-1_amd64.deb'
-          sudo dpkg -i 'google-chrome-stable_106.0.5249.103-1_amd64.deb'
-
-      - name: Chrome version  # check if chrome is installed
-        run: google-chrome-stable --version
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
 
       - name: Install dependencies and run main.py
         run: |
