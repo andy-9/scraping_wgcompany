@@ -5,13 +5,13 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # be able to run manually on GitHub
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"  # run every midnight
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # most current os
+    runs-on: ubuntu-latest
 
     env:  # setup env
       SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -21,14 +21,14 @@ jobs:
       PASSWORD: ${{ secrets.PASSWORD }}  # get GitHub secrets into env
 
     steps:
-      - uses: actions/checkout@v3  # check out repo so a workflow can access it
+      - uses: actions/checkout@v4  # check out repo so a workflow can access it
 
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Set up Python
-        uses: actions/setup-python@v4  # sets up a python environment
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
