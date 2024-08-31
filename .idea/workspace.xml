@@ -7,6 +7,7 @@
     <list default="true" id="5feb2d6e-ea5d-48e3-a870-657db8b631fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/send_email.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/send_email.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     &quot;last_opened_file_path&quot;: &quot;/home/andy/Git/grail&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.scraping_wgcomapny">
     <configuration name="scraping_wgcomapny" type="PythonConfigurationType" factoryName="Python">
       <module name="scraping_wgcompany" />
@@ -70,8 +71,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.cache/pypoetry/virtualenvs/scraping-wgcompany-KvuRqqvz-py3.10/bin/python" />
+      <option name="SDK_NAME" value="Python 3.10 (scraping_wgcompany)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="net.ashald.envfile">
