@@ -4,6 +4,7 @@ import smtplib
 import ssl
 import warnings
 from datetime import datetime, timedelta
+from smtplib import SMTPException
 from typing import Tuple
 
 import dateparser
@@ -565,9 +566,15 @@ Einstelldatum:  {date}
     # Create a secure SSL context
     context = ssl.create_default_context()
 
-    with smtplib.SMTP_SSL(host=SMTP_SERVER, port=PORT, context=context) as server:
-        server.login(SENDER_EMAIL, PASSWORD)
-        server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message)
+    try:
+        with smtplib.SMTP_SSL(host=SMTP_SERVER, port=PORT, context=context) as server:
+            server.login(SENDER_EMAIL, PASSWORD)
+            server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message)
+            print("email sent")
+    except SMTPException as e:
+        print(f"Failed to send email: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 def main():
