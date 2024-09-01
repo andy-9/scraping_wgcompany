@@ -7,9 +7,9 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 chromedriver-autoinstaller = "^0.6.4"
-chromedriver-py = "^120.0.6099.71"
+chromedriver-py = "^128.0.6613.86"
 dateparser = "^1.2.0"
-python = "^3.11"
+python = "^3.12"
 python-dotenv = "^1.0.1"
 selenium = "^4.19.0"
 webdriver_manager = "^4.0.1"

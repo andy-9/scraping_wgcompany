@@ -20,7 +20,7 @@ The idea was to build an app that emails once a day new WG-entries to a given em
 
 
 ## Technologies
-The code is written in Python 3.10.  
+The code is written in Python 3.12.  
 
 It was tested on ubuntu 22 and Chrome version 106.0.5249.103.  
 If a newer version of Chrome is used, chromedriver_autoinstaller automatically downloads the latest chromedriver - 
@@ -28,7 +28,7 @@ it is important that the versions of Chrome and the chromedriver match.
 
 Additional libraries installed and used are:  
 * chromedriver-autoinstaller = "^0.4.0"
-* chromedriver-py = "^106.0.5249"
+* chromedriver-py = "^128.0.6613.86"
 * dateparser = "^1.1.1"
 * poetry = "^1.2.1"
 * python-dotenv = "^0.21.0"
