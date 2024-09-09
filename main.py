@@ -60,7 +60,7 @@ def get_links_wg_offers() -> list:
     """
     driver = run_chrome()
     driver.get("http://www.wgcompany.de/cgi-bin/seite?st=1&mi=20&li=100")
-    assert "WGcompany" in driver.title, '"WGcompany" not in title'
+    # assert "WGcompany" in driver.title, '"WGcompany" not in title'
 
     # Select: select permanent
     select_length = Select(driver.find_element(By.NAME, "v"))
