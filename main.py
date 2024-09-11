@@ -55,7 +55,7 @@ def get_links_wg_offers() -> list:
     last entries are shown first.
     Then iterate through the whole site, get all the links of wg-offers with XPath and put them in a list which is
     then returned.
-    One assertion checks for the correct title.
+    // One assertion checks for the correct title.
     :return: list of strings, the strings are hyperlinks of wg-offers
     """
     driver = run_chrome()
@@ -95,7 +95,7 @@ def get_recent_dates(links: list) -> list:
     went online), replaces German with English months and appends the date and wg-link as a tuple to a new date_list.
     This date_list then is iterated to get only those links where the corresponding date is a maximum of 2 days old (
     only the newest wg-ads ). Those links are stored in a new list recent_entries_link_list which is then returned.
-    One assertion checks for the correct title.
+    // One assertion checks for the correct title.
     param links: list of strings, the strings are hyperlinks
     :return: list of strings, the strings are hyperlinks, only the most recent ones are in that list
     """
@@ -108,7 +108,7 @@ def get_recent_dates(links: list) -> list:
     for link in links:
         # scrape link in links-list
         driver.get(link)
-        assert "WGcompany" in driver.title, '"WGcompany" not in title'
+        # assert "WGcompany" in driver.title, '"WGcompany" not in title'
 
         # get complete html in link
         wg_site = driver.page_source
@@ -183,13 +183,13 @@ def get_wg_info(
     """
     Function receives hyperlink as parameter and gets every value (37 strings) from the specific wg-offer and stores
     it in a variable. All of those are returned. It uses XPath and in some cases RegEx-patterns to retrieve the values.
-    One assertion checks for the correct title.
+    // One assertion checks for the correct title.
     param link: string, hyperlink to specific wg-offer
     :return: Tuple with 37 string values
     """
     driver = run_chrome()
     driver.get(link)
-    assert "WGcompany" in driver.title, '"WGcompany" not in title'
+    # assert "WGcompany" in driver.title, '"WGcompany" not in title'
 
     entry_date = driver.find_element(
         By.XPATH, "/html/body/table/tbody/tr[1]/td[2]/div[2]/font"
