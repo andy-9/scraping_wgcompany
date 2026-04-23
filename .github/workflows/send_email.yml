@@ -9,6 +9,9 @@ on:
   schedule:
     - cron: "0 0 * * *"  # run every midnight
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
